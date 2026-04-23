@@ -1,0 +1,541 @@
+// Universidad CIES — Datos de todos los programas (planes oficiales)
+
+const PROGRAMAS = {
+
+  // ── LICENCIATURAS ──────────────────────────────────────────────────────────
+
+  'lic-derecho': {
+    title: 'Derecho', clave: 'RVOE-BC-021-M2/12',
+    categoryLabel: 'Licenciaturas', categoryPage: 'licenciaturas',
+    subtitle: 'Formación jurídica sólida con enfoque en derecho penal, civil, comercial y constitucional para el contexto fronterizo México-Estados Unidos.',
+    meta: [
+      { label: 'Duración', value: '10 cuatrimestres', icon: '🗓' },
+      { label: 'Créditos', value: '357 créditos · 50 materias', icon: '📚' },
+      { label: 'Modalidad', value: 'Mixta', icon: '🏫' },
+      { label: 'Período', value: 'Cuatrimestral', icon: '📅' },
+    ],
+    importancia: {
+      desc: 'El Derecho es la base de toda sociedad organizada. En la región fronteriza Tijuana-San Diego, el marco legal binacional, el comercio internacional y la migración generan una demanda constante de abogados especializados.',
+      puntos: [
+        'La frontera México-EU genera miles de casos de derecho migratorio, aduanal y comercial cada año.',
+        'Tijuana es sede de importantes despachos jurídicos binacionales y corporativos multinacionales.',
+        'El sistema de justicia oral exige abogados con habilidades de litigación modernas y actualizadas.',
+        'Alta demanda de abogados en empresas maquiladoras para cumplimiento normativo y derecho laboral.',
+      ]
+    },
+    plan: {
+      duracion: '10 cuatrimestres · 357 créditos', modalidad: 'Mixta', periodo: 'Cuatrimestral',
+      cuatrimestres: [
+        { num: '1er Cuatrimestre', materias: ['Alfabetización Digital', 'Formación Ciudadana', 'Comunicación Oral y Escrita', 'Teoría General del Estado', 'Marco Conceptual del Derecho'] },
+        { num: '2do Cuatrimestre', materias: ['Filosofía del Derecho', 'Derecho Romano', 'Reformas Constitucionales Contemporáneas', 'Teoría General del Proceso', 'Sistemas Jurídicos Comparados'] },
+        { num: '3er Cuatrimestre', materias: ['Epistemología Jurídica', 'Derecho Internacional Público', 'Derecho Penal', 'Derecho Constitucional', 'Derecho Civil'] },
+        { num: '4to Cuatrimestre', materias: ['Metodología de la Investigación Jurídica', 'Derecho Internacional Privado', 'Derecho Procesal Penal', 'Derecho Procesal Constitucional', 'Derecho Procesal Civil'] },
+        { num: '5to Cuatrimestre', materias: ['Estadística Aplicada a la Investigación Jurídica', 'Derecho Internacional de los Derechos Humanos', 'Derecho Mercantil', 'Derecho Fiscal', 'Derecho Laboral'] },
+        { num: '6to Cuatrimestre', materias: ['Métodos de Estudio de Casos Jurídicos', 'Derecho Administrativo', 'Derecho Procesal Mercantil', 'Derecho Procesal Fiscal', 'Derecho Procesal Laboral'] },
+        { num: '7mo Cuatrimestre', materias: ['Redacción y Argumentación Jurídica', 'Contratos Civiles y Mercantiles', 'Derecho Agrario', 'Derecho Notarial', 'Derecho de Amparo'] },
+        { num: '8vo Cuatrimestre', materias: ['Psicología Jurídica', 'Medios Alternos de Solución de Conflictos', 'Derecho Aduanero', 'Derecho del Trabajo', 'Movimientos Sociales Contemporáneos'] },
+        { num: '9no Cuatrimestre', materias: ['Técnicas de Litigación en Juicios Orales', 'Derecho Parlamentario Mexicano', 'Derecho Ambiental', 'Estado de Derecho y Control de la Corrupción', 'Políticas Públicas y Derechos Sociales'] },
+        { num: '10mo Cuatrimestre', materias: ['Derecho Electoral', 'Derecho Migratorio', 'Derecho de Propiedad Intelectual', 'Ética y Desarrollo Profesional', 'Diseño y Análisis de Políticas Públicas', 'Prácticas Profesionales'] },
+      ],
+    },
+    perfilIngreso: [
+      'Bachillerato o preparatoria concluida',
+      'Interés en las ciencias sociales, la justicia y el derecho',
+      'Habilidades de análisis, argumentación y lectura crítica',
+      'Capacidad para trabajo en equipo y comunicación oral',
+      'Disposición para el trabajo bajo presión y resolución de conflictos',
+    ],
+    perfilEgreso: [
+      'Ejercer la abogacía de manera liberal o en despachos jurídicos',
+      'Desempeñarse en el sector público como ministerio público, juez o defensor',
+      'Asesorar empresas en materia legal, fiscal y laboral',
+      'Representar legalmente a personas físicas y morales en juicios',
+      'Diseñar e implementar estrategias jurídicas de defensa y litigación',
+      'Participar en procesos de mediación, arbitraje y negociación',
+    ],
+    campoLaboral: [
+      { sector: 'Litigación y despachos', desc: 'Abogado postulante en despachos jurídicos o práctica privada en materias civil, penal y mercantil.' },
+      { sector: 'Sector público', desc: 'Ministerio Público, Defensoría de Oficio, Poder Judicial, procuradurías y organismos gubernamentales.' },
+      { sector: 'Empresas y corporativos', desc: 'Asesoría legal, contratos comerciales, derecho laboral y cumplimiento normativo.' },
+      { sector: 'Comercio exterior', desc: 'Derecho aduanero, contratos internacionales y resolución de controversias fronterizas.' },
+      { sector: 'Notarías y registros', desc: 'Fedatario público, asesor notarial, registros públicos de la propiedad y del comercio.' },
+      { sector: 'Docencia e investigación', desc: 'Profesor universitario e investigador en ciencias jurídicas y derecho comparado.' },
+    ],
+    porQueCIES: [
+      { title: 'Docentes en activo', desc: 'Jueces, ministerios públicos, abogados corporativos y notarios que ejercen hoy en Tijuana.' },
+      { title: 'Litigación oral integrada', desc: 'Técnicas de litigación en juicios orales como materia formal en el 9no cuatrimestre.' },
+      { title: 'Contexto fronterizo único', desc: 'Derecho aduanero, migratorio e internacional incluidos como materias del plan oficial.' },
+      { title: 'Prácticas profesionales', desc: 'Práctica profesional incluida en el plan de estudios como materia del último cuatrimestre.' },
+      { title: 'Formación integral', desc: 'Plan que abarca desde filosofía del derecho hasta políticas públicas y derechos sociales.' },
+      { title: 'Resolución alternativa de conflictos', desc: 'Mediación y arbitraje como materia formal dentro del plan de estudios.' },
+    ],
+  },
+
+  'lic-comercio': {
+    title: 'Comercio Exterior y Aduanas', clave: 'RVOE-BC-L008-M2/23',
+    categoryLabel: 'Licenciaturas', categoryPage: 'licenciaturas',
+    subtitle: 'Domina los mercados internacionales, la clasificación arancelaria y la logística global desde la frontera más activa del mundo.',
+    meta: [
+      { label: 'Duración', value: '9 cuatrimestres', icon: '🗓' },
+      { label: 'Modalidad', value: 'Presencial', icon: '🏫' },
+      { label: 'RVOE', value: 'RVOE-BC-L008-M2/23', icon: '✓' },
+      { label: 'Período', value: 'Cuatrimestral', icon: '📅' },
+    ],
+    importancia: {
+      desc: 'El comercio internacional es el motor de la economía de Baja California. Tijuana es el cruce fronterizo terrestre más transitado del mundo, generando una demanda permanente de especialistas en comercio exterior, logística y aduanas.',
+      puntos: [
+        'El corredor Tijuana-Tecate-Mexicali mueve miles de millones de dólares en exportaciones cada año.',
+        'El T-MEC requiere profesionistas especializados en reglas de origen, clasificación arancelaria y cumplimiento.',
+        'La industria maquiladora necesita expertos en operaciones aduanales bajo régimen IMMEX.',
+        'La explosión del e-commerce global abre nuevas oportunidades en exportaciones digitales y logística internacional.',
+      ]
+    },
+    plan: {
+      duracion: '9 cuatrimestres', modalidad: 'Presencial', periodo: 'Cuatrimestral',
+      cuatrimestres: [
+        { num: '1er Cuatrimestre', materias: ['Estudio de las Mercancías', 'Introducción al Estudio de Derecho', 'Administración', 'Contabilidad I', 'Matemáticas'] },
+        { num: '2do Cuatrimestre', materias: ['Clasificación Arancelaria', 'Técnicas de Mercadeo', 'Administración II', 'Contabilidad II', 'Matemáticas para las Ciencias Sociales'] },
+        { num: '3er Cuatrimestre', materias: ['Derecho Mercantil', 'Economía I', 'Comercio Internacional', 'Contabilidad de Costos', 'Matemáticas Financieras'] },
+        { num: '4to Cuatrimestre', materias: ['Origen de las Mercancías', 'Economía II', 'Anexo 22 Importación y Exportación', 'Contratos Comerciales e Internacionales', 'Régimen Aduanero'] },
+        { num: '5to Cuatrimestre', materias: ['Mercadotecnia Internacional', 'Derecho Aduanero', 'Economía Internacional', 'Finanzas Internacionales', 'Derecho Marítimo'] },
+        { num: '6to Cuatrimestre', materias: ['Logística de Comercio Internacional', 'Ley Aduanera', 'Derecho Internacional Público', 'Valoración Aduanera de Mercancías', 'Ética Profesional y de Negocios'] },
+        { num: '7mo Cuatrimestre', materias: ['Integración Económica', 'Derecho Internacional Privado', 'Certificaciones de Calidad', 'Ley de Comercio Exterior', 'Procedimiento Administrativo en Materia Aduanera'] },
+        { num: '8vo Cuatrimestre', materias: ['Derecho Consular', 'Análisis de Tratados Internacionales', 'Derecho de Inversión Extranjera', 'Comercio Cibernético', 'Proyectos de Comercialización Internacional y Determinación de Contribuciones al Comercio Exterior'] },
+        { num: '9no Cuatrimestre', materias: ['Empresas Transnacionales y Maquiladoras', 'Globalización y Comercio Internacional', 'Seminario de Tesis', 'Formulación de Proyectos Internacionales', 'La Negociación Internacional'] },
+      ],
+    },
+    perfilIngreso: [
+      'Bachillerato o preparatoria concluida',
+      'Interés por los negocios internacionales y el comercio global',
+      'Habilidades numéricas y de análisis económico',
+      'Interés o conocimiento básico de inglés',
+      'Capacidad de adaptación y visión global',
+    ],
+    perfilEgreso: [
+      'Gestionar operaciones de importación y exportación con dominio del marco legal y arancelario',
+      'Clasificar mercancías conforme a la tarifa de la LIGIE y la normatividad aplicable',
+      'Aplicar la Ley Aduanera y los procedimientos administrativos en materia aduanal',
+      'Negociar contratos y acuerdos comerciales internacionales',
+      'Administrar cadenas de suministro globales y operaciones de logística internacional',
+      'Identificar oportunidades de mercado en el T-MEC y otros tratados comerciales',
+    ],
+    campoLaboral: [
+      { sector: 'Agencias aduanales', desc: 'Agente aduanal, auxiliar de despacho y clasificador arancelario en Tijuana, Tecate y Mexicali.' },
+      { sector: 'Empresas maquiladoras', desc: 'Gestión de importaciones temporales, IMMEX y operaciones bajo régimen de maquila.' },
+      { sector: 'Logística y transporte', desc: 'Coordinador de logística internacional, operador de transporte multimodal y almacenes.' },
+      { sector: 'Comercio electrónico', desc: 'Gestión de exportaciones digitales, marketplace internacional y cumplimiento aduanero.' },
+      { sector: 'Gobierno y organismos', desc: 'SAT-Aduanas, Secretaría de Economía y organismos de promoción del comercio exterior.' },
+      { sector: 'Consultoría', desc: 'Asesor en regulaciones de comercio exterior, certificaciones de origen y valoración aduanera.' },
+    ],
+    porQueCIES: [
+      { title: 'Frontera más activa del mundo', desc: 'Tijuana-San Diego procesa más cruces que cualquier frontera terrestre. Nuestros egresados trabajan en el corazón del comercio.' },
+      { title: 'Plan 100% orientado a la práctica', desc: 'Clasificación arancelaria, Anexo 22, Ley Aduanera y régimen aduanero como materias formales desde el primer año.' },
+      { title: 'RVOE oficial vigente', desc: 'Clave BC-L008-M2/23. Título con plena validez ante la SEP.' },
+      { title: 'Convenios con maquiladoras', desc: 'Bolsa de trabajo con empresas del corredor industrial de Tijuana.' },
+      { title: 'Tratados internacionales en el plan', desc: 'Materias específicas de T-MEC, Ley de Comercio Exterior y negociación internacional.' },
+      { title: 'Derecho marítimo y consular', desc: 'Formación completa que incluye transporte marítimo, derecho consular e inversión extranjera.' },
+    ],
+  },
+
+  'lic-administracion': {
+    title: 'Administración de Empresas', clave: 'RVOE-BC-L015-M2/23',
+    categoryLabel: 'Licenciaturas', categoryPage: 'licenciaturas',
+    subtitle: 'Lidera organizaciones con visión estratégica, gestión financiera y habilidades de emprendimiento para el mercado del siglo XXI.',
+    meta: [
+      { label: 'Duración', value: '9 cuatrimestres', icon: '🗓' },
+      { label: 'Modalidad', value: 'Presencial', icon: '🏫' },
+      { label: 'RVOE', value: 'RVOE-BC-L015-M2/23', icon: '✓' },
+      { label: 'Período', value: 'Cuatrimestral', icon: '📅' },
+    ],
+    importancia: {
+      desc: 'Las organizaciones de todos los sectores necesitan administradores competentes para crecer, adaptarse y prosperar. En un entorno de constante cambio tecnológico y globalización, la capacidad de gestión estratégica es más valiosa que nunca.',
+      puntos: [
+        'Toda empresa, grande o pequeña, necesita administradores que dirijan personas, finanzas y operaciones.',
+        'El emprendimiento en Baja California crece a doble dígito, generando alta demanda de gestores de negocios.',
+        'La transformación digital requiere directivos que entiendan tecnología y negocios al mismo tiempo.',
+        'Los administradores son los perfiles más versátiles del mercado: trabajan en cualquier industria y sector.',
+      ]
+    },
+    plan: {
+      duracion: '9 cuatrimestres', modalidad: 'Presencial', periodo: 'Cuatrimestral',
+      cuatrimestres: [
+        { num: '1er Cuatrimestre', materias: ['Introducción a los Negocios', 'Introducción al Estudio del Derecho', 'Administración', 'Contabilidad I', 'Matemáticas'] },
+        { num: '2do Cuatrimestre', materias: ['Derecho Constitucional y Administrativo', 'Administración Estrategia de las Organizaciones', 'Contabilidad II', 'Comportamiento Organizacional I', 'Matemáticas para las Ciencias Sociales'] },
+        { num: '3er Cuatrimestre', materias: ['Derecho Mercantil', 'Economía I', 'Contabilidad de Costos I', 'Comportamiento Organizacional II', 'Matemáticas Financieras'] },
+        { num: '4to Cuatrimestre', materias: ['Diseño de Organización', 'Derecho Laboral', 'Economía II', 'Estadística Administrativa I', 'Contabilidad de Costos II'] },
+        { num: '5to Cuatrimestre', materias: ['Estadística Administrativa II', 'Administración de Recursos Humanos I', 'Derecho Tributario I', 'Contabilidad Administrativa', 'Teoría de Comercio Internacional', 'Mercadotecnia I'] },
+        { num: '6to Cuatrimestre', materias: ['Derecho Tributario II', 'Análisis de Decisiones', 'Administración de Recursos Humanos II', 'Mercadotecnia II', 'Dirección y Liderazgo', 'Técnicas de Crédito y Cobranza'] },
+        { num: '7mo Cuatrimestre', materias: ['Formulación y Evaluación de Proyectos de Inversión', 'Desarrollo Organizacional', 'Planeación y Control de la Producción', 'Administración de Publicidad y Ventas', 'Finanzas Corporativas', 'Planeación y Control Logístico'] },
+        { num: '8vo Cuatrimestre', materias: ['Auditoría Administrativa', 'Investigación de Mercados', 'Administración de la Producción', 'Convenios Internacionales de Comercio', 'Evaluación de Franquicias'] },
+        { num: '9no Cuatrimestre', materias: ['Seminario de Dirección Empresarial', 'Seminario de Administración Pública', 'Seminario de Mercadotecnia', 'Seminario de Tesis'] },
+      ],
+    },
+    perfilIngreso: [
+      'Bachillerato o preparatoria concluida',
+      'Interés por los negocios, la gestión y el emprendimiento',
+      'Habilidades analíticas y numéricas básicas',
+      'Capacidad de liderazgo y trabajo colaborativo',
+      'Orientación a resultados y toma de decisiones',
+    ],
+    perfilEgreso: [
+      'Dirigir empresas, departamentos o proyectos con visión estratégica',
+      'Gestionar recursos humanos, financieros, materiales y tecnológicos',
+      'Diseñar e implementar planes de negocios y estrategias de crecimiento',
+      'Evaluar proyectos de inversión y controlar la rentabilidad organizacional',
+      'Emprender negocios propios o liderar procesos de innovación empresarial',
+      'Asesorar a organizaciones en procesos de mejora, logística y comercialización',
+    ],
+    campoLaboral: [
+      { sector: 'Dirección y gerencia', desc: 'Gerente, director o subdirector en empresas de manufactura, servicios o comercio.' },
+      { sector: 'Recursos humanos', desc: 'Administración de personal, reclutamiento, capacitación y desarrollo organizacional.' },
+      { sector: 'Finanzas y contabilidad', desc: 'Análisis financiero, tesorería y control de costos para PyMES y corporativos.' },
+      { sector: 'Emprendimiento', desc: 'Fundador y director de empresa propia o franquicia.' },
+      { sector: 'Logística y producción', desc: 'Planeación y control logístico, producción y cadena de suministro.' },
+      { sector: 'Sector público', desc: 'Administración pública, organismos descentralizados y dependencias gubernamentales.' },
+    ],
+    porQueCIES: [
+      { title: 'RVOE oficial vigente', desc: 'Clave BC-L015-M2/23. Título con plena validez ante la SEP.' },
+      { title: 'Plan integrado con derecho y finanzas', desc: 'Incluye derecho laboral, tributario, mercantil y finanzas corporativas como materias formales.' },
+      { title: 'Énfasis en liderazgo', desc: 'Dirección, liderazgo y comportamiento organizacional como ejes transversales del plan.' },
+      { title: 'Seminarios especializados', desc: 'El último cuatrimestre incluye seminarios de dirección empresarial, administración pública y mercadotecnia.' },
+      { title: 'Comercio internacional integrado', desc: 'Teoría de comercio internacional y convenios internacionales dentro del plan de estudios.' },
+      { title: 'Horarios flexibles', desc: 'Turno matutino y vespertino para que puedas trabajar mientras estudias.' },
+    ],
+  },
+
+  'lic-educacion': {
+    title: 'Ciencias de la Educación', clave: 'RVOE-BC-L025-M2/23',
+    categoryLabel: 'Licenciaturas', categoryPage: 'licenciaturas',
+    subtitle: 'Forma profesionales capaces de transformar la educación con herramientas pedagógicas modernas, tecnología educativa y gestión institucional.',
+    meta: [
+      { label: 'Duración', value: '9 cuatrimestres', icon: '🗓' },
+      { label: 'Modalidad', value: 'Presencial', icon: '🏫' },
+      { label: 'RVOE', value: 'RVOE-BC-L025-M2/23', icon: '✓' },
+      { label: 'Período', value: 'Cuatrimestral', icon: '📅' },
+    ],
+    importancia: {
+      desc: 'La educación está en un punto de inflexión. La tecnología, las nuevas generaciones y la demanda de competencias del siglo XXI transforman los modelos educativos, y las instituciones necesitan profesionales capaces de liderar ese cambio.',
+      puntos: [
+        'México enfrenta una demanda urgente de educadores con formación en tecnología pedagógica e innovación.',
+        'Las empresas invierten cada vez más en formación y capacitación, generando empleos para educadores con visión corporativa.',
+        'Las instituciones privadas en crecimiento necesitan directivos con formación en gestión educativa de calidad.',
+        'La IA y las plataformas digitales están redefiniendo cómo se diseña, imparte y evalúa el aprendizaje.',
+      ]
+    },
+    plan: {
+      duracion: '9 cuatrimestres', modalidad: 'Presencial', periodo: 'Cuatrimestral',
+      cuatrimestres: [
+        { num: '1er Cuatrimestre', materias: ['Estrategias Meta Cognitivas', 'Entorno SocioCultural de México', 'Comunicación Oral y Escrita', 'Epistemología de las Ciencias de la Educación', 'Historia de la Educación'] },
+        { num: '2do Cuatrimestre', materias: ['Inteligencia Emocional', 'Redacción de Textos Académicos', 'Herramientas Digitales para el Aprendizaje', 'Filosofía de la Educación', 'Sociología de la Educación'] },
+        { num: '3er Cuatrimestre', materias: ['Formación Ciudadana', 'Política y Legislación Educativa', 'Análisis de Problemas Educativos', 'Teorías Psicológicas del Aprendizaje', 'Sistema Educativo Nacional'] },
+        { num: '4to Cuatrimestre', materias: ['Corrientes Constructivistas en Educación', 'Planeación Educativa', 'Modelos de Educación a Distancia', 'Psicopedagogía', 'Educación con Enfoque por Competencias'] },
+        { num: '5to Cuatrimestre', materias: ['Evaluación Educativa', 'Didáctica', 'Diseño Instruccional para la Educación a Distancia', 'Necesidades Educativas Especiales', 'Planeación Didáctica por Competencias'] },
+        { num: '6to Cuatrimestre', materias: ['Evaluación Formativa del Aprendizaje', 'Diseño Curricular', 'Elaboración de Recursos Didácticos Digitales', 'Enfoques Educativos Emergentes', 'Diseño de Programas de Asignatura', 'Gestión Educativa Estratégica'] },
+        { num: '7mo Cuatrimestre', materias: ['Investigación Educativa I', 'Evaluación Curricular', 'Técnicas de Dinámicas de Grupos', 'Prácticas Profesionales I', 'Intervención Educativa', 'Gestión y Administración de Instituciones Educativas'] },
+        { num: '8vo Cuatrimestre', materias: ['Investigación Educativa II', 'Emprendimiento Educativo', 'Evaluación de la Calidad en Instituciones Educativas', 'Prácticas Profesionales II'] },
+        { num: '9no Cuatrimestre', materias: ['Ética Profesional', 'Seminario de Trabajo Terminal', 'Profesionalización Docente', 'Prácticas Profesionales III'] },
+      ],
+    },
+    perfilIngreso: [
+      'Bachillerato o preparatoria concluida',
+      'Vocación hacia la enseñanza y el trabajo con personas',
+      'Interés en la psicología, la pedagogía y el desarrollo humano',
+      'Habilidades de comunicación oral y escrita',
+      'Empatía y disposición para el servicio educativo',
+    ],
+    perfilEgreso: [
+      'Diseñar e implementar programas curriculares con enfoque por competencias',
+      'Aplicar metodologías de enseñanza innovadoras y didáctica general',
+      'Gestionar instituciones educativas de manera estratégica y eficiente',
+      'Desarrollar recursos didácticos digitales e instruccionales',
+      'Evaluar procesos de aprendizaje con criterios formativos y cuantitativos',
+      'Investigar e intervenir en problemáticas educativas reales',
+    ],
+    campoLaboral: [
+      { sector: 'Docencia', desc: 'Profesor en escuelas públicas y privadas en niveles básico, medio superior y superior.' },
+      { sector: 'Gestión educativa', desc: 'Director, subdirector o coordinador académico en instituciones educativas.' },
+      { sector: 'Capacitación empresarial', desc: 'Diseñador instruccional y facilitador de programas de formación en empresas.' },
+      { sector: 'Tecnología educativa', desc: 'Especialista en e-learning, recursos didácticos digitales y plataformas LMS.' },
+      { sector: 'Sector público', desc: 'SEP, CONAFE, INEA y dependencias de educación de los tres niveles de gobierno.' },
+      { sector: 'Investigación educativa', desc: 'Investigador y evaluador de programas en centros académicos y organismos.' },
+    ],
+    porQueCIES: [
+      { title: 'RVOE oficial vigente', desc: 'Clave BC-L025-M2/23. Título con plena validez ante la SEP.' },
+      { title: 'Prácticas profesionales en 3 etapas', desc: 'Prácticas I, II y III integradas en los últimos cuatrimestres del plan oficial.' },
+      { title: 'Herramientas digitales desde el 2do cuatrimestre', desc: 'Tecnología educativa, diseño instruccional y recursos didácticos digitales en el plan.' },
+      { title: 'Doble enfoque: docencia y gestión', desc: 'Egresarás preparado para dar clases y para administrar instituciones educativas.' },
+      { title: 'Investigación educativa formal', desc: 'Dos materias de investigación educativa más seminario de trabajo terminal en el plan.' },
+      { title: 'Emprendimiento educativo', desc: 'Materia de emprendimiento educativo incluida para crear tu propio proyecto o institución.' },
+    ],
+  },
+
+  // ── INGENIERÍAS ────────────────────────────────────────────────────────────
+
+  'ing-robotica': {
+    title: 'Ingeniería en Robótica', clave: 'RVOE-BC-070-M2/15',
+    categoryLabel: 'Ingenierías', categoryPage: 'ingenierias',
+    subtitle: 'Diseña, programa e integra sistemas robóticos industriales para la manufactura avanzada, automatización y la industria 4.0 de la región fronteriza.',
+    meta: [
+      { label: 'Duración', value: '10 cuatrimestres', icon: '🗓' },
+      { label: 'Modalidad', value: 'Presencial', icon: '🏫' },
+      { label: 'RVOE', value: 'RVOE-BC-070-M2/15', icon: '✓' },
+      { label: 'Período', value: 'Cuatrimestral', icon: '📅' },
+    ],
+    importancia: {
+      desc: 'La robótica está redefiniendo la manufactura global. Tijuana concentra la mayor densidad de plantas de manufactura avanzada de México, y todas ellas necesitan ingenieros capaces de programar, integrar y mantener sistemas robóticos industriales.',
+      puntos: [
+        'Tijuana es el principal polo de manufactura electrónica, médica y aeroespacial de México.',
+        'La automatización industrial crece a tasas del 15% anual en el corredor fronterizo.',
+        'Los robots colaborativos (cobots) están llegando a PyMES y startups de la región.',
+        'Alta demanda de ingenieros en robótica en las maquiladoras establecidas en Baja California.',
+      ]
+    },
+    plan: {
+      duracion: '10 cuatrimestres', modalidad: 'Presencial', periodo: 'Cuatrimestral',
+      cuatrimestres: [
+        { num: '1er Cuatrimestre', materias: ['Fundamentos de Álgebra', 'Desarrollo de Dibujo Bidimensional', 'Análisis de Sistemas Estáticos', 'Estructuras de Sistemas Computarizados', 'Introducción a la Ingeniería'] },
+        { num: '2do Cuatrimestre', materias: ['Desarrollo Derivativo de Funciones', 'Diseño Tridimensional', 'Análisis de Sistemas Dinámicos', 'Análisis de Sistemas Computarizados', 'Tecnología de Materiales'] },
+        { num: '3er Cuatrimestre', materias: ['Desarrollo Integrativo de Funciones', 'Seguridad e Higiene Industrial', 'Mecánica de Materiales', 'Programación Orientada a Objetos', 'Teoría y Práctica de Mediciones Físicas'] },
+        { num: '4to Cuatrimestre', materias: ['Análisis Numérico', 'Administración Industrial', 'Electricidad y Magnetismo', 'Análisis de Circuitos Eléctricos', 'Análisis de Señales'] },
+        { num: '5to Cuatrimestre', materias: ['Motores Eléctricos', 'Estructuras de Sistemas de Control', 'Teoría y Práctica Neumática', 'Operación de Sistemas Electrónicos Analógicos', 'Operación de Sistemas Electrónicos Digitales'] },
+        { num: '6to Cuatrimestre', materias: ['Sensores y Traductores', 'Análisis de Sistemas de Control', 'Teoría y Práctica Oleohidráulica', 'Operación de Sistemas Electrónicos de Potencia', 'Controladores Lógicos Programables'] },
+        { num: '7mo Cuatrimestre', materias: ['Fundamentos de Robótica', 'Amplificadores Operacionales', 'Sistemas Flexibles de Manufactura', 'Máquinas y Mecanismos', 'Microcontroladores'] },
+        { num: '8vo Cuatrimestre', materias: ['Sistemas Robóticos', 'Simulación y Emulación de Robots', 'Instrumentación Industrial', 'Integración y Aplicación de Servomecanismos', 'Proyectos de Automatización y Control'] },
+        { num: '9no Cuatrimestre', materias: ['Robótica Aplicada', 'Programación de Robots en Trayectorias Inteligentes', 'Sistemas Embebidos', 'Energía Alternativa y Renovable', 'Redes Industriales'] },
+        { num: '10mo Cuatrimestre', materias: ['Instalación de Robots en Ambientes Industriales', 'Ética y Profesionalismo', 'Inteligencia Artificial', 'Desarrollo de Emprendedores', 'Seminario de Tesis'] },
+      ],
+    },
+    perfilIngreso: [
+      'Bachillerato concluido con orientación en ciencias exactas o tecnología',
+      'Conocimientos sólidos de matemáticas, física y computación',
+      'Pensamiento lógico y habilidad para resolver problemas técnicos',
+      'Interés en la automatización, los robots y la manufactura avanzada',
+      'Habilidades manuales y creatividad para el diseño de sistemas',
+    ],
+    perfilEgreso: [
+      'Diseñar y programar sistemas robóticos industriales con precisión',
+      'Integrar robots en líneas de producción y sistemas de manufactura avanzada',
+      'Programar y mantener brazos robóticos, cobots y robots móviles',
+      'Implementar sistemas de automatización con PLCs, sensores y servomecanismos',
+      'Gestionar proyectos de robotización e industria 4.0',
+      'Aplicar inteligencia artificial y visión por computadora en sistemas robóticos',
+    ],
+    campoLaboral: [
+      { sector: 'Industria maquiladora', desc: 'Ingeniero de automatización y robótica en plantas de manufactura electrónica, médica y aeroespacial en Tijuana.' },
+      { sector: 'Automotriz', desc: 'Programación de brazos robóticos FANUC, KUKA y ABB en líneas de ensamble y soldadura.' },
+      { sector: 'Aeroespacial y médico', desc: 'Integrador de sistemas robóticos de alta precisión en plantas de Baja California.' },
+      { sector: 'Logística', desc: 'Implementación de robots logísticos y sistemas de clasificación automatizados.' },
+      { sector: 'Consultoría e integración', desc: 'Integrador de sistemas robóticos para empresas industriales de la región fronteriza.' },
+      { sector: 'Investigación y docencia', desc: 'Centros de investigación, universidades y laboratorios de robótica en México y EU.' },
+    ],
+    porQueCIES: [
+      { title: 'Plan oficial de 10 cuatrimestres', desc: 'Formación completa desde fundamentos de ingeniería hasta instalación de robots en ambientes industriales reales.' },
+      { title: 'Alta demanda en la región', desc: 'El corredor industrial Tijuana-Mexicali demanda permanentemente ingenieros en robótica.' },
+      { title: 'Conexión con maquiladoras', desc: 'Convenios con plantas de manufactura avanzada para prácticas y empleo desde el primer año.' },
+      { title: 'PLCs, sensores y servomecanismos', desc: 'Formación completa en los sistemas que operan en las fábricas de Tijuana hoy.' },
+      { title: 'IA e Industria 4.0 en el plan', desc: 'Inteligencia artificial y redes industriales integradas en los últimos cuatrimestres.' },
+      { title: 'Emprendimiento tecnológico', desc: 'Materia de Desarrollo de Emprendedores para crear tu propio proyecto o startup.' },
+    ],
+  },
+
+  'ing-ia': {
+    title: 'Ingeniería en Inteligencia Artificial', clave: 'RVOE-BC-L040-M2/25',
+    categoryLabel: 'Ingenierías', categoryPage: 'ingenierias',
+    subtitle: 'Desarrolla sistemas inteligentes con machine learning, visión artificial, redes neuronales y automatización para las industrias tecnológicas de la frontera.',
+    meta: [
+      { label: 'Duración', value: '9 cuatrimestres', icon: '🗓' },
+      { label: 'Modalidad', value: 'Presencial', icon: '🏫' },
+      { label: 'Enfoque', value: 'IA + Robótica + IoT', icon: '🧠' },
+      { label: 'Período', value: 'Cuatrimestral', icon: '📅' },
+    ],
+    importancia: {
+      desc: 'La inteligencia artificial combinada con la robótica es la tecnología más disruptiva de nuestra era. Está transformando todas las industrias y generando la mayor demanda de talento especializado de la historia reciente.',
+      puntos: [
+        'El mercado global de IA y robótica superará los $500 mil millones de dólares para 2030.',
+        'Tijuana conecta con Silicon Valley y el ecosistema tech de San Diego, generando oportunidades únicas.',
+        'Todas las industrias de manufactura y servicios adoptan IA y automatización para optimizar operaciones.',
+        'Los ingenieros de IA y Robótica son los profesionales con mayor demanda en el mercado tecnológico actual.',
+      ]
+    },
+    plan: {
+      duracion: '9 cuatrimestres', modalidad: 'Presencial', periodo: 'Cuatrimestral',
+      cuatrimestres: [
+        { num: '1er Cuatrimestre', materias: ['Fundamentos de Álgebra', 'Introducción a la Ingeniería', 'Análisis de Sistemas Estáticos y Dinámicos', 'Estructuras de Sistemas Computarizados', 'Desarrollo de Dibujo Bidimensional'] },
+        { num: '2do Cuatrimestre', materias: ['Desarrollo Derivativo e Integrativo de Funciones', 'Seguridad e Higiene Industrial', 'Mecánica de Materiales', 'Análisis de Sistemas Computarizados', 'Diseño Tridimensional'] },
+        { num: '3er Cuatrimestre', materias: ['Análisis Numérico', 'Administración Industrial', 'Electricidad y Magnetismo', 'Programación Orientada a Objetos', 'Teoría y Práctica de Mediciones Físicas'] },
+        { num: '4to Cuatrimestre', materias: ['Máquinas y Mecanismos', 'Sistemas Flexibles de Manufactura', 'Instrumentación Industrial', 'Análisis de Circuitos Eléctricos', 'Análisis de Señales'] },
+        { num: '5to Cuatrimestre', materias: ['Integración y Aplicación de Servomecanismos', 'Análisis de Sistemas de Control', 'Sistemas Neumáticos y Oleohidráulicos', 'Operación de Sistemas Electrónicos Analógicos', 'Operación de Sistemas Electrónicos Digitales'] },
+        { num: '6to Cuatrimestre', materias: ['Fundamentos de Inteligencia Artificial', 'Análisis de Sistemas de Control 2', 'Motores Eléctricos', 'Operación de Sistemas Electrónicos de Potencia', 'Sensores y Transductores'] },
+        { num: '7mo Cuatrimestre', materias: ['Sistemas Robóticos', 'Visión Artificial', 'Amplificadores Operacionales', 'Microcontroladores', 'Controladores Lógicos Programables'] },
+        { num: '8vo Cuatrimestre', materias: ['Redes Neuronales', 'Sistemas Multiagentes', 'Redes Industriales', 'Energía Alternativa y Renovable', 'Proyectos de Automatización y Control'] },
+        { num: '9no Cuatrimestre', materias: ['Implementación de Proyectos Mecatrónicos', 'Ética y Profesionalismo', 'Internet de las Cosas', 'Desarrollo de Emprendedores', 'Seminario de Tesis'] },
+      ],
+    },
+    perfilIngreso: [
+      'Bachillerato concluido con orientación en ciencias exactas o computación',
+      'Sólidos conocimientos de álgebra, física y lógica',
+      'Interés en programación, sistemas inteligentes y automatización',
+      'Pensamiento analítico y capacidad de abstracción',
+      'Curiosidad científica y habilidad para el aprendizaje continuo',
+    ],
+    perfilEgreso: [
+      'Diseñar e implementar sistemas de inteligencia artificial aplicada a la industria',
+      'Programar y operar sistemas robóticos con integración de IA',
+      'Desarrollar redes neuronales y sistemas multiagentes para automatización',
+      'Implementar soluciones IoT para manufactura inteligente e industria 4.0',
+      'Diseñar proyectos de automatización y control con tecnologías avanzadas',
+      'Liderar emprendimientos tecnológicos en el sector de IA y robótica',
+    ],
+    campoLaboral: [
+      { sector: 'Industria manufacturera', desc: 'Visión artificial, control automático y robótica en maquiladoras de Tijuana.' },
+      { sector: 'Empresas tecnológicas', desc: 'Desarrollo de sistemas de IA, redes neuronales y automatización inteligente.' },
+      { sector: 'IoT e industria 4.0', desc: 'Diseño de sistemas conectados, sensores y redes industriales para manufactura inteligente.' },
+      { sector: 'Energías renovables', desc: 'Automatización de sistemas de energía alternativa y proyectos de sustentabilidad.' },
+      { sector: 'Investigación y desarrollo', desc: 'Centros de investigación, universidades y laboratorios de IA en México y EU.' },
+      { sector: 'Emprendimiento', desc: 'Fundador de startup tecnológica en automatización, robótica o inteligencia artificial.' },
+    ],
+    porQueCIES: [
+      { title: 'Programa único en la región', desc: 'Integra IA, robótica, sistemas de control e IoT en una sola ingeniería de 9 cuatrimestres.' },
+      { title: 'Visión artificial y redes neuronales', desc: 'Materias específicas de visión artificial y redes neuronales desde el 7mo cuatrimestre.' },
+      { title: 'Redes industriales e IoT', desc: 'Internet de las Cosas y redes industriales como materias formales del plan oficial.' },
+      { title: 'Proyectos de automatización reales', desc: 'Proyectos integradores de automatización desde el 8vo cuatrimestre.' },
+      { title: 'Energía alternativa integrada', desc: 'Materia de energía alternativa y renovable como parte del perfil del egresado.' },
+      { title: 'Alta empleabilidad en la frontera', desc: 'El corredor industrial Tijuana-Mexicali demanda permanentemente ingenieros con este perfil.' },
+    ],
+  },
+
+  'ing-mecatronica': {
+    title: 'Ingeniería en Mecatrónica', clave: 'RVOE-BC-L039-M2/25',
+    categoryLabel: 'Ingenierías', categoryPage: 'ingenierias',
+    subtitle: 'Integra mecánica, electrónica, computación y control para diseñar sistemas automatizados de alto valor en la industria 4.0.',
+    meta: [
+      { label: 'Duración', value: '9 cuatrimestres', icon: '🗓' },
+      { label: 'Modalidad', value: 'Presencial', icon: '🏫' },
+      { label: 'Enfoque', value: 'Mecánica + Electrónica + Control', icon: '⚙️' },
+      { label: 'Período', value: 'Cuatrimestral', icon: '📅' },
+    ],
+    importancia: {
+      desc: 'La mecatrónica es la ingeniería de los sistemas inteligentes. En un mundo donde la automatización y la digitalización transforman la manufactura, los mecatrónicos son los ingenieros más completos y demandados del mercado industrial.',
+      puntos: [
+        'Tijuana alberga plantas aeroespaciales, médicas y electrónicas que requieren mecatrónicos para sus líneas de producción.',
+        'La Industria 4.0 necesita ingenieros que integren hardware y software: el perfil exacto del mecatrónico.',
+        'Los mecatrónicos tienen el índice de empleabilidad más alto entre los egresados de ingeniería en Baja California.',
+        'El diseño de productos inteligentes y dispositivos mecatrónicos es un mercado en expansión permanente.',
+      ]
+    },
+    plan: {
+      duracion: '9 cuatrimestres', modalidad: 'Presencial', periodo: 'Cuatrimestral',
+      cuatrimestres: [
+        { num: '1er Cuatrimestre', materias: ['Fundamentos de Álgebra', 'Introducción a la Ingeniería', 'Análisis de Sistemas Estáticos y Dinámicos', 'Estructuras de Sistemas Computarizados', 'Desarrollo de Dibujo Bidimensional'] },
+        { num: '2do Cuatrimestre', materias: ['Desarrollo Derivativo e Integrativo de Funciones', 'Seguridad e Higiene Industrial', 'Mecánica de Materiales', 'Análisis de Sistemas Computarizados', 'Diseño Tridimensional'] },
+        { num: '3er Cuatrimestre', materias: ['Análisis Numérico', 'Administración Industrial', 'Electricidad y Magnetismo', 'Programación Orientada a Objetos', 'Teoría y Práctica de Mediciones Físicas'] },
+        { num: '4to Cuatrimestre', materias: ['Máquinas y Mecanismos', 'Sistemas Flexibles de Manufactura', 'Instrumentación Industrial', 'Análisis de Circuitos Eléctricos', 'Análisis de Señales'] },
+        { num: '5to Cuatrimestre', materias: ['Integración y Aplicación de Servomecanismos', 'Análisis de Sistemas de Control', 'Sistemas Neumáticos y Oleohidráulicos', 'Operación de Sistemas Electrónicos Analógicos', 'Operación de Sistemas Electrónicos Digitales'] },
+        { num: '6to Cuatrimestre', materias: ['Fundamentos de Mecatrónica', 'Análisis de Sistemas de Control 2', 'Motores Eléctricos', 'Operación de Sistemas Electrónicos de Potencia', 'Sensores y Transductores'] },
+        { num: '7mo Cuatrimestre', materias: ['Sistemas Robóticos', 'Sistemas Mecatrónicos', 'Amplificadores Operacionales', 'Microcontroladores', 'Controladores Lógicos Programables'] },
+        { num: '8vo Cuatrimestre', materias: ['Diseño y Construcción de Sistemas Mecatrónicos', 'Mantenimiento a Sistemas Mecatrónicos', 'Redes Industriales', 'Energía Alternativa y Renovable', 'Proyectos de Automatización y Control'] },
+        { num: '9no Cuatrimestre', materias: ['Implementación de Proyectos Mecatrónicos', 'Ética y Profesionalismo', 'Inteligencia Artificial', 'Desarrollo de Emprendedores', 'Seminario de Tesis'] },
+      ],
+    },
+    perfilIngreso: [
+      'Bachillerato concluido con enfoque en ciencias exactas o tecnología',
+      'Conocimientos sólidos de matemáticas, física y computación',
+      'Habilidades manuales e interés en el diseño y la fabricación',
+      'Pensamiento sistémico e integrativo (ver el todo y las partes)',
+      'Curiosidad por la mecánica, la electrónica y los sistemas automáticos',
+    ],
+    perfilEgreso: [
+      'Diseñar y construir sistemas mecatrónicos que integren mecánica, electrónica y software',
+      'Programar controladores, PLCs y microcontroladores para automatización industrial',
+      'Implementar sistemas de control y mantenimiento de equipos mecatrónicos',
+      'Diseñar proyectos de automatización con sensores, actuadores y redes industriales',
+      'Aplicar inteligencia artificial en sistemas mecatrónicos',
+      'Gestionar emprendimientos y proyectos de innovación tecnológica',
+    ],
+    campoLaboral: [
+      { sector: 'Manufactura y maquiladora', desc: 'Ingeniero de manufactura, automatización y mantenimiento en industria electrónica, médica y aeroespacial.' },
+      { sector: 'Diseño de sistemas mecatrónicos', desc: 'Diseño y construcción de sistemas integrados para la industria y el consumo.' },
+      { sector: 'Robótica y automatización', desc: 'Integrador de sistemas robóticos y automatizador de procesos industriales.' },
+      { sector: 'Mantenimiento industrial', desc: 'Mantenimiento y reparación de sistemas mecatrónicos en plantas de producción.' },
+      { sector: 'Industria aeroespacial y médica', desc: 'Tijuana alberga plantas aeroespaciales y de dispositivos médicos que requieren mecatrónicos.' },
+      { sector: 'Emprendimiento tecnológico', desc: 'Fundador de empresa de tecnología, automatización o productos de hardware.' },
+    ],
+    porQueCIES: [
+      { title: 'La ingeniería más completa', desc: 'Mecatrónica combina mecánica, electrónica, computación y control en un solo profesionista.' },
+      { title: 'Diseño y construcción real', desc: 'Materia específica de diseño y construcción de sistemas mecatrónicos en el 8vo cuatrimestre.' },
+      { title: 'Mantenimiento incluido en el plan', desc: 'Mantenimiento de sistemas mecatrónicos como materia formal del plan de estudios.' },
+      { title: 'IA en el último cuatrimestre', desc: 'Inteligencia artificial integrada al perfil del mecatrónico en el 9no cuatrimestre.' },
+      { title: 'Alta demanda laboral', desc: 'Los mecatrónicos son los perfiles más demandados en el corredor industrial de Baja California.' },
+      { title: 'Emprendimiento tecnológico', desc: 'Materia de desarrollo de emprendedores para crear tu propio proyecto tecnológico.' },
+    ],
+  },
+
+  'ing-industrial': {
+    title: 'Ingeniería Industrial', clave: 'RVOE-BC-L038-M2/25',
+    categoryLabel: 'Ingenierías', categoryPage: 'ingenierias',
+    subtitle: 'Optimiza procesos productivos, reduce costos y mejora la eficiencia operacional en manufactura, logística y servicios con herramientas de vanguardia.',
+    meta: [
+      { label: 'Duración', value: '9 cuatrimestres', icon: '🗓' },
+      { label: 'Modalidad', value: 'Presencial', icon: '🏫' },
+      { label: 'Enfoque', value: 'Manufactura + Logística + Control', icon: '🏭' },
+      { label: 'Período', value: 'Cuatrimestral', icon: '📅' },
+    ],
+    importancia: {
+      desc: 'El ingeniero industrial es el arquitecto de la eficiencia. En un entorno de manufactura global donde los márgenes son ajustados y la competencia es feroz, las empresas dependen de ingenieros industriales para sobrevivir y crecer.',
+      puntos: [
+        'Tijuana tiene el mayor parque industrial de México, con cientos de plantas que requieren ingenieros industriales permanentemente.',
+        'Lean Manufacturing y control estadístico de procesos son metodologías que toda empresa de manufactura aplica.',
+        'La Industria 4.0 amplía el campo del industrial: robótica, IA y redes industriales ahora son parte de su trabajo.',
+        'Los ingenieros industriales trabajan en todos los sectores: manufactura, hospitales, logística y servicios.',
+      ]
+    },
+    plan: {
+      duracion: '9 cuatrimestres', modalidad: 'Presencial', periodo: 'Cuatrimestral',
+      cuatrimestres: [
+        { num: '1er Cuatrimestre', materias: ['Fundamentos de Álgebra', 'Introducción a la Ingeniería', 'Análisis de Sistemas Estáticos y Dinámicos', 'Estructuras de Sistemas Computarizados', 'Desarrollo de Dibujo Bidimensional'] },
+        { num: '2do Cuatrimestre', materias: ['Desarrollo Derivativo e Integrativo de Funciones', 'Seguridad e Higiene Industrial', 'Mecánica de Materiales', 'Análisis de Sistemas Computarizados', 'Diseño Tridimensional'] },
+        { num: '3er Cuatrimestre', materias: ['Análisis Numérico', 'Administración Industrial', 'Electricidad y Magnetismo', 'Programación Orientada a Objetos', 'Teoría y Práctica de Mediciones Físicas'] },
+        { num: '4to Cuatrimestre', materias: ['Máquinas y Mecanismos', 'Sistemas Flexibles de Manufactura', 'Instrumentación Industrial', 'Análisis de Circuitos Eléctricos', 'Control Estadístico de Procesos'] },
+        { num: '5to Cuatrimestre', materias: ['Integración y Aplicación de Servomecanismos', 'Análisis de Sistemas de Control', 'Sistemas Neumáticos y Oleohidráulicos', 'Operación de Sistemas Electrónicos', 'Estudio de Ergonomía'] },
+        { num: '6to Cuatrimestre', materias: ['Estudio del Trabajo', 'Investigación de Operaciones', 'Motores Eléctricos', 'Fundamentos de Robótica', 'Sensores y Transductores'] },
+        { num: '7mo Cuatrimestre', materias: ['Gestión del Mantenimiento', 'Gestión de la Producción', 'Psicología Industrial', 'Microcontroladores', 'Controladores Lógicos Programables'] },
+        { num: '8vo Cuatrimestre', materias: ['Ingeniería Económica', 'Fundamentos de Mercadotecnia', 'Redes Industriales', 'Energía Alternativa y Renovable', 'Proyectos de Automatización y Control'] },
+        { num: '9no Cuatrimestre', materias: ['Formulación y Evaluación de Proyectos', 'Ética y Profesionalismo', 'Inteligencia Artificial', 'Desarrollo de Emprendedores', 'Seminario de Tesis'] },
+      ],
+    },
+    perfilIngreso: [
+      'Bachillerato concluido con formación en matemáticas y ciencias exactas',
+      'Capacidad analítica y pensamiento sistémico',
+      'Interés en la optimización de procesos y la eficiencia operacional',
+      'Habilidades de liderazgo y trabajo en equipo',
+      'Orientación a resultados y mejora continua',
+    ],
+    perfilEgreso: [
+      'Diseñar y optimizar procesos productivos con control estadístico y estudio del trabajo',
+      'Gestionar la producción y planear operaciones industriales',
+      'Implementar sistemas de mantenimiento y gestión de planta',
+      'Evaluar proyectos de inversión con criterios de ingeniería económica',
+      'Aplicar fundamentos de robótica e inteligencia artificial en procesos industriales',
+      'Formular y evaluar proyectos de automatización y mejora continua',
+    ],
+    campoLaboral: [
+      { sector: 'Manufactura y maquiladora', desc: 'Ingeniero de procesos, producción y control estadístico en la industria fronteriza.' },
+      { sector: 'Logística y operaciones', desc: 'Gestión de producción, mantenimiento y operaciones industriales.' },
+      { sector: 'Proyectos de automatización', desc: 'Implementación de proyectos de automatización y control en plantas de producción.' },
+      { sector: 'Formulación de proyectos', desc: 'Evaluación y formulación de proyectos de inversión industrial y de infraestructura.' },
+      { sector: 'Mercadotecnia industrial', desc: 'Aplicación de fundamentos de mercadotecnia en el ámbito industrial y de manufactura.' },
+      { sector: 'Emprendimiento', desc: 'Desarrollo de proyectos propios y emprendimientos en el sector industrial y tecnológico.' },
+    ],
+    porQueCIES: [
+      { title: 'Contexto industrial inigualable', desc: 'Tijuana tiene el mayor parque industrial de México. Nuestros egresados trabajan a minutos del campus.' },
+      { title: 'Control estadístico de procesos', desc: 'Materia específica de control estadístico desde el 4to cuatrimestre del plan oficial.' },
+      { title: 'Robótica e IA en el plan', desc: 'Fundamentos de robótica en el 6to e inteligencia artificial en el 9no cuatrimestre.' },
+      { title: 'Gestión del mantenimiento', desc: 'Materia formal de gestión del mantenimiento industrial en el 7mo cuatrimestre.' },
+      { title: 'Psicología industrial', desc: 'Formación en factor humano y psicología industrial para liderar equipos de producción.' },
+      { title: 'Energías renovables integradas', desc: 'Energía alternativa y renovable como materia del plan oficial de estudios.' },
+    ],
+  },
+
+};
+
+Object.assign(window, { PROGRAMAS });

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link rel="preload" href="fonts/Figtree-Bold.ttf" as="font" type="font/truetype" crossorigin="anonymous">
+<link rel="icon" type="image/png" href="assets/LOGO_UNI_CIES_1.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Universidad CIES — Tijuana, Baja California</title>
+<style>
+@font-face { font-family:'Varsity Impact'; src:url('fonts/Varsity-Impact-Bold.otf') format('opentype'); font-weight:700; }
+@font-face { font-family:'Varsity Impact'; src:url('fonts/Varsity-Impact-Extrabold.otf') format('opentype'); font-weight:800; }
+@font-face { font-family:'Varsity Impact'; src:url('fonts/Varsity-Impact-Regular.otf') format('opentype'); font-weight:400; }
+@font-face { font-family:'Figtree'; src:url('fonts/Figtree-Regular.ttf') format('truetype'); font-weight:400; }
+@font-face { font-family:'Figtree'; src:url('fonts/Figtree-Medium.ttf') format('truetype'); font-weight:500; }
+@font-face { font-family:'Figtree'; src:url('fonts/Figtree-SemiBold.ttf') format('truetype'); font-weight:600; }
+@font-face { font-family:'Figtree'; src:url('fonts/Figtree-Bold.ttf') format('truetype'); font-weight:700; }
+@font-face { font-family:'Figtree'; src:url('fonts/Figtree-ExtraBold.ttf') format('truetype'); font-weight:800; }
+
+*,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+html { scroll-behavior:smooth; }
+body { font-family:'Figtree',system-ui,sans-serif; background:#fff; color:#1A1A1A; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+#root { overflow-x: hidden; }
+
+/* Beca banner slide-up animation */
+@keyframes slideUp { from { opacity:0; transform:translateX(-50%) translateY(20px); } to { opacity:1; transform:translateX(-50%) translateY(0); } }
+
+/* Hide stat dividers when bar wraps on mobile */
+@media (max-width: 680px) {
+  .stat-div { display: none !important; }
+  .stats-bar .stat-item { border-bottom: 1px solid #F0F0F0; padding: 18px 16px !important; }
+}
+
+/* ── Mobile program page fixes ─────── */
+@media (max-width: 680px) {
+  .pp-header-inner { padding: 0 16px !important; }
+  .pp-meta-row { gap: 6px 12px !important; }
+  .pp-meta-item { font-size: 12px !important; }
+  .pp-body { padding: 16px 0 48px !important; }
+  .pp-body-inner { padding: 0 12px !important; }
+  .pp-section { padding: 20px 16px !important; }
+  .pp-plan-grid { grid-template-columns: 1fr !important; }
+  .pp-egreso-grid, .pp-campo-grid, .pp-razones-grid, .pp-imp-grid { grid-template-columns: 1fr !important; }
+  .pp-cta-banner { flex-direction: column !important; text-align: center !important; }
+}
+
+/* ── Responsive nav ─── */
+@media (max-width: 900px) {
+  .nav-desktop { display:none !important; }
+  .nav-burger { display:flex !important; }
+  .nav-cta-desktop { display:none !important; }
+}
+
+/* ── Tablet (≤ 900px) ───────────────── */
+@media (max-width: 900px) {
+  .program-body-inner, .pg-body-inner { grid-template-columns: 1fr !important; }
+  .program-body-inner aside, .pg-body-inner aside { display: none; }
+  .niveles-grid { grid-template-columns: 1fr !important; }
+  .model-grid   { grid-template-columns: 1fr !important; }
+  .testim-grid  { grid-template-columns: 1fr !important; }
+  .map-grid     { grid-template-columns: 1fr !important; }
+  .map-grid > div:first-child { height: 260px !important; }
+  .footer-grid  { grid-template-columns: 1fr 1fr !important; gap: 32px !important; }
+  .step-grid    { grid-template-columns: 1fr 1fr !important; }
+  .form-grid    { grid-template-columns: 1fr !important; }
+}
+
+/* ── Mobile (≤ 680px) ───────────────── */
+@media (max-width: 680px) {
+  /* Hero */
+  .hero-inner { padding: 56px 20px 48px !important; }
+
+  /* Grids → stack */
+  .stats-bar    { flex-wrap: wrap !important; justify-content: center !important; }
+  .stats-bar > * { flex: 1 1 40% !important; min-width: 120px !important; }
+  .programs-grid  { grid-template-columns: 1fr !important; }
+  .niveles-grid   { grid-template-columns: 1fr !important; }
+  .model-grid     { grid-template-columns: 1fr !important; }
+  .pilares-grid   { grid-template-columns: 1fr !important; }
+  .testim-grid    { grid-template-columns: 1fr !important; }
+  .footer-grid    { grid-template-columns: 1fr !important; gap: 28px !important; }
+  .mvs-grid       { grid-template-columns: 1fr !important; }
+  .num-grid       { grid-template-columns: repeat(3,1fr) !important; }
+  .step-grid      { grid-template-columns: 1fr !important; }
+  .form-grid      { grid-template-columns: 1fr !important; }
+  .listing-grid   { grid-template-columns: 1fr !important; }
+  .maestrias-grid { grid-template-columns: 1fr !important; }
+  .prep-grid      { grid-template-columns: 1fr !important; }
+  .req-grid       { grid-template-columns: 1fr !important; }
+  .map-grid       { grid-template-columns: 1fr !important; }
+  .map-grid > div:first-child { height: 220px !important; }
+
+  /* Strip CTA */
+  .strip-inner { flex-direction: column !important; text-align: center !important; align-items: center !important; }
+
+  /* Section padding */
+  section { padding-left: 0 !important; padding-right: 0 !important; }
+}
+
+/* ── Small mobile (≤ 420px) ─────────── */
+@media (max-width: 420px) {
+  .num-grid { grid-template-columns: repeat(2,1fr) !important; }
+  .stats-bar > * { flex: 1 1 45% !important; padding: 16px 12px !important; }
+}
+
+/* Force inner containers to respect viewport */
+.page-enter > * { max-width: 100vw; overflow-x: hidden; }
+img { max-width: 100%; height: auto; }
+
+/* ── Page entrance animations ───────── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(0.97); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.anim-hero-title {
+  animation: fadeInUp 0.7s cubic-bezier(0.22,1,0.36,1) both;
+}
+.anim-hero-sub {
+  animation: fadeInUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.15s both;
+}
+.anim-hero-actions {
+  animation: fadeInUp 0.6s cubic-bezier(0.22,1,0.36,1) 0.28s both;
+}
+.anim-hero-badge {
+  animation: fadeInLeft 0.5s cubic-bezier(0.22,1,0.36,1) both;
+}
+.anim-section-title {
+  animation: fadeInUp 0.65s cubic-bezier(0.22,1,0.36,1) both;
+}
+.anim-page-title {
+  animation: fadeInUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.1s both;
+}
+.anim-page-sub {
+  animation: fadeInUp 0.6s cubic-bezier(0.22,1,0.36,1) 0.22s both;
+}
+.anim-fade {
+  animation: fadeInScale 0.6s cubic-bezier(0.22,1,0.36,1) both;
+}
+
+/* Smooth page transitions */
+.page-enter { animation: fadeIn 0.25s ease; }
+@keyframes fadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+
+/* Scrollbar */
+::-webkit-scrollbar { width:6px; }
+::-webkit-scrollbar-track { background:#F5F5F5; }
+::-webkit-scrollbar-thumb { background:#C8C8C8; border-radius:3px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script>
+window.CIES_BASE = '';
+window.CIES_NAV = {
+  "home": "index.html",
+  "nosotros": "universidad-cies-tijuana/index.html",
+  "licenciaturas": "licenciaturas-tijuana-baja-california/index.html",
+  "lic-derecho": "licenciatura-en-derecho-tijuana/index.html",
+  "lic-comercio": "licenciatura-comercio-exterior-aduanas-tijuana/index.html",
+  "lic-administracion": "licenciatura-administracion-empresas-tijuana/index.html",
+  "lic-educacion": "licenciatura-ciencias-educacion-tijuana/index.html",
+  "ingenierias": "ingenierias-tijuana-baja-california/index.html",
+  "ing-robotica": "ingenieria-robotica-ia-tijuana/index.html",
+  "ing-ia": "ingenieria-inteligencia-artificial-tijuana/index.html",
+  "ing-mecatronica": "ingenieria-mecatronica-tijuana/index.html",
+  "ing-industrial": "ingenieria-industrial-tijuana/index.html",
+  "maestrias": "maestrias-ejecutivas-tijuana/index.html",
+  "mba": "mba-ejecutivo-tijuana/index.html",
+  "mie": "maestria-innovacion-educativa-tijuana/index.html",
+  "preparatoria": "preparatoria-tijuana-certificado-sep/index.html",
+  "admisiones": "admisiones-universidad-tijuana/index.html"
+};
+</script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<!-- Components -->
+<script type="text/babel" src="components/Nav.jsx"></script>
+<script type="text/babel" src="components/SiteFooter.jsx"></script>
+<script type="text/babel" src="components/Shared.jsx"></script>
+
+<!-- Pages -->
+<script type="text/babel" src="pages/ProgramData.jsx"></script>
+<script type="text/babel" src="pages/ProgramPage.jsx"></script>
+<script type="text/babel" src="pages/HomePage.jsx"></script>
+<script type="text/babel" src="pages/NosotrosPage.jsx"></script>
+<script type="text/babel" src="pages/OtherPages.jsx"></script>
+
+<script type="text/babel">
+// ── Hash routing (no external library needed) ───────────
+
+const PAGE_ROUTES = {
+  'home':               '/',
+  'nosotros':           '/universidad-cies-tijuana',
+  'licenciaturas':      '/licenciaturas-tijuana-baja-california',
+  'lic-derecho':        '/licenciatura-en-derecho-tijuana',
+  'lic-comercio':       '/licenciatura-comercio-exterior-aduanas-tijuana',
+  'lic-administracion': '/licenciatura-administracion-empresas-tijuana',
+  'lic-educacion':      '/licenciatura-ciencias-educacion-tijuana',
+  'ingenierias':        '/ingenierias-tijuana-baja-california',
+  'ing-robotica':       '/ingenieria-robotica-ia-tijuana',
+  'ing-ia':             '/ingenieria-inteligencia-artificial-tijuana',
+  'ing-mecatronica':    '/ingenieria-mecatronica-tijuana',
+  'ing-industrial':     '/ingenieria-industrial-tijuana',
+  'maestrias':          '/maestrias-ejecutivas-tijuana',
+  'mba':                '/mba-ejecutivo-tijuana',
+  'mie':                '/maestria-innovacion-educativa-tijuana',
+  'preparatoria':       '/preparatoria-tijuana-certificado-sep',
+  'admisiones':         '/admisiones-universidad-tijuana',
+};
+const ROUTE_PAGES = Object.fromEntries(Object.entries(PAGE_ROUTES).map(([k,v]) => [v, k]));
+
+const getPageFromHash = () => {
+  const hash = window.location.hash.replace(/^#/, '') || '/';
+  return ROUTE_PAGES[hash] || 'home';
+};
+
+const pushHash = (pageKey) => {
+  const path = PAGE_ROUTES[pageKey] || '/';
+  window.location.hash = path;
+};
+
+// ── SEO meta per page ───────────────────────────────────
+const PAGE_META = {
+  'home':               { title:'Universidad CIES Tijuana — Licenciaturas, Ingenierías y Maestrías', desc:'Universidad CIES Tijuana: +30 años formando profesionistas en Baja California. Licenciaturas, ingenierías, maestrías ejecutivas y preparatoria con RVOE SEP. Blvd. Federico Benítez 5.' },
+  'nosotros':           { title:'Universidad CIES Tijuana — Quiénes somos | Historia y Valores', desc:'Conoce la misión, visión y valores de Universidad CIES, una de las instituciones de educación superior más reconocidas de Tijuana, Baja California, México.' },
+  'licenciaturas':      { title:'Licenciaturas en Tijuana con RVOE SEP — Universidad CIES', desc:'4 licenciaturas en Tijuana: Derecho, Comercio Exterior y Aduanas, Administración de Empresas y Ciencias de la Educación. Modalidad presencial en Baja California.' },
+  'lic-derecho':        { title:'Licenciatura en Derecho Tijuana — Universidad CIES | RVOE SEP', desc:'Estudia Derecho en Tijuana. Litigación oral, derecho penal, civil, aduanero y migratorio para el contexto fronterizo México-Estados Unidos. RVOE SEP.' },
+  'lic-comercio':       { title:'Licenciatura Comercio Exterior y Aduanas Tijuana — CIES | RVOE BC-L008', desc:'Licenciatura en Comercio Exterior y Aduanas en Tijuana BC. T-MEC, clasificación arancelaria, Ley Aduanera. RVOE BC-L008-M2/23.' },
+  'lic-administracion': { title:'Licenciatura Administración de Empresas Tijuana — CIES | RVOE BC-L015', desc:'Licenciatura en Administración de Empresas en Tijuana, Baja California. Liderazgo, finanzas, mercadotecnia y emprendimiento. RVOE BC-L015-M2/23.' },
+  'lic-educacion':      { title:'Licenciatura Ciencias de la Educación Tijuana — CIES | RVOE BC-L025', desc:'Estudia Ciencias de la Educación en Tijuana. Pedagogía, tecnología educativa, diseño curricular y gestión escolar. RVOE BC-L025-M2/23.' },
+  'ingenierias':        { title:'Ingenierías en Tijuana para la Industria 4.0 — Universidad CIES', desc:'4 ingenierías en Tijuana: Robótica, Inteligencia Artificial, Mecatrónica e Industrial. Formación presencial para el corredor maquilador de Baja California.' },
+  'ing-robotica':       { title:'Ingeniería en Robótica e IA Tijuana — Universidad CIES Baja California', desc:'Ingeniería en IA y Robótica en Tijuana BC. Sistemas robóticos, visión artificial, PLCs, microcontroladores e IoT para la industria maquiladora de Baja California.' },
+  'ing-ia':             { title:'Ingeniería Inteligencia Artificial Tijuana — Universidad CIES', desc:'Estudia Ingeniería en Inteligencia Artificial en Tijuana. Machine learning, redes neuronales, automatización e IoT para la industria tecnológica y manufacturera de BC.' },
+  'ing-mecatronica':    { title:'Ingeniería en Mecatrónica Tijuana — Universidad CIES Baja California', desc:'Ingeniería en Mecatrónica en Tijuana, BC. Mecánica, electrónica, control y computación para la industria aeroespacial, médica y manufacturera del corredor fronterizo.' },
+  'ing-industrial':     { title:'Ingeniería Industrial Tijuana Baja California — Universidad CIES', desc:'Ingeniería Industrial en Tijuana, BC. Optimización de procesos, control estadístico, gestión de producción y automatización para el parque industrial más grande de México.' },
+  'maestrias':          { title:'Maestrías Ejecutivas Tijuana — MBA e Innovación Educativa | CIES', desc:'Maestrías ejecutivas en Tijuana, Baja California: MBA y Maestría en Innovación Educativa. 4 semestres, 75 créditos. Viernes y sábados. Validez SEP.' },
+  'mba':                { title:'MBA Ejecutivo Tijuana Baja California — Universidad CIES', desc:'MBA Ejecutivo en Tijuana, BC. 4 semestres, 75 créditos. Finanzas, liderazgo, estrategia y negocios internacionales. Viernes y sábados para profesionistas de Baja California.' },
+  'mie':                { title:'Maestría en Innovación Educativa Tijuana — Universidad CIES', desc:'Maestría en Innovación Educativa en Tijuana, Baja California. 4 semestres, 75 créditos. Didáctica, diseño curricular y tecnología educativa. Modalidad ejecutiva.' },
+  'preparatoria':       { title:'Preparatoria Tijuana Certificado SEP — Universidad CIES', desc:'Preparatoria en Tijuana, BC con certificado válido ante la SEP. Bachillerato General (3 años) y Modalidad a Dos Años. Becas disponibles. Blvd. Federico Benítez 5.' },
+  'admisiones':         { title:'Admisiones Universidad CIES Tijuana — Inscríbete por WhatsApp', desc:'Proceso de admisión en Universidad CIES, Tijuana Baja California. Inscríbete por WhatsApp (664) 490-1395. Licenciaturas, ingenierías, maestrías, preparatoria y becas.' },
+};
+const applyMeta = (pageKey) => {
+  const m = PAGE_META[pageKey] || PAGE_META['home'];
+  document.title = m.title;
+  const upsertMeta = (name, content, prop = false) => {
+    const attr = prop ? 'property' : 'name';
+    let el = document.querySelector(`meta[${attr}="${name}"]`);
+    if (!el) { el = document.createElement('meta'); el.setAttribute(attr, name); document.head.appendChild(el); }
+    el.content = content;
+  };
+  upsertMeta('description', m.desc);
+  upsertMeta('og:title', m.title, true);
+  upsertMeta('og:description', m.desc, true);
+  upsertMeta('og:type', 'website', true);
+  upsertMeta('og:locale', 'es_MX', true);
+  // Canonical URL based on hash path
+  const path = PAGE_ROUTES[pageKey] || '/';
+  let canonical = document.querySelector('link[rel="canonical"]');
+  if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical); }
+  canonical.href = 'https://universidadcies.mx' + path;
+};
+
+// ── Tweaks defaults ─────────────────────────────────────
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "primaryColor": "#2B4DA8",
+  "accentColor": "#C23535",
+  "darkBg": "#0F1E4A",
+  "whatsappVisible": true
+}/*EDITMODE-END*/;
+
+// ── Main App ────────────────────────────────────────────
+const App = () => {
+  const [page, setPage]         = React.useState(getPageFromHash);
+  const [tweaks, setTweaks]     = React.useState(TWEAK_DEFAULTS);
+  const [tweakOpen, setTweakOpen] = React.useState(false);
+  const [animKey, setAnimKey]   = React.useState(0);
+
+  // Listen to hash changes (back/forward + direct URL)
+  React.useEffect(() => {
+    const onHash = () => {
+      const p = getPageFromHash();
+      setPage(p);
+      setAnimKey(k => k + 1);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+    window.addEventListener('hashchange', onHash);
+    return () => window.removeEventListener('hashchange', onHash);
+  }, []);
+
+  // Apply SEO meta whenever page changes
+  React.useEffect(() => { applyMeta(page); }, [page]);
+
+  // Edit mode messages
+  React.useEffect(() => {
+    const handler = (e) => {
+      if (e.data?.type === '__activate_edit_mode')   setTweakOpen(true);
+      if (e.data?.type === '__deactivate_edit_mode') setTweakOpen(false);
+    };
+    window.addEventListener('message', handler);
+    window.parent.postMessage({ type: '__edit_mode_available' }, '*');
+    return () => window.removeEventListener('message', handler);
+  }, []);
+
+  // CSS vars
+  React.useEffect(() => {
+    document.documentElement.style.setProperty('--color-blue', tweaks.primaryColor);
+    document.documentElement.style.setProperty('--color-red',  tweaks.accentColor);
+    document.documentElement.style.setProperty('--color-navy', tweaks.darkBg);
+  }, [tweaks]);
+
+  const updateTweak = (key, val) => {
+    const next = { ...tweaks, [key]: val };
+    setTweaks(next);
+    window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { [key]: val } }, '*');
+  };
+
+  // navigate(pageKey) → go to dedicated page file
+  const navigate = (pageKey) => {
+    const href = window.CIES_NAV && window.CIES_NAV[pageKey];
+    if (href) { window.location.href = href; return; }
+    // fallback: hash
+    pushHash(pageKey);
+    setPage(pageKey);
+    setAnimKey(k => k + 1);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const programPages = ['lic-derecho','lic-comercio','lic-administracion','lic-educacion','ing-robotica','ing-ia','ing-mecatronica','ing-industrial'];
+
+  const renderPage = () => {
+    if (programPages.includes(page)) {
+      const data = PROGRAMAS[page];
+      return data ? <ProgramPage key={page} program={data} onNavigate={navigate} /> : <HomePage onNavigate={navigate} />;
+    }
+    switch (page) {
+      case 'nosotros':      return <NosotrosPage      onNavigate={navigate} />;
+      case 'licenciaturas': return <LicenciaturasPage onNavigate={navigate} />;
+      case 'ingenierias':   return <IngenieriasPage   onNavigate={navigate} />;
+      case 'maestrias':     return <MaestriasPage     onNavigate={navigate} />;
+      case 'mba':           return <MBAPage           onNavigate={navigate} />;
+      case 'mie':           return <MIEPage           onNavigate={navigate} />;
+      case 'preparatoria':  return <PreparatoriaPage  onNavigate={navigate} />;
+      case 'admisiones':    return <AdmisionesPage    onNavigate={navigate} />;
+      default:              return <HomePage          onNavigate={navigate} />;
+    }
+  };
+
+  return (
+    <div>
+      <Nav currentPage={page} onNavigate={navigate} />
+      <main key={animKey} className="page-enter">{renderPage()}</main>
+      <SiteFooter onNavigate={navigate} />
+      {tweaks.whatsappVisible && <WhatsAppFAB />}
+      <BecaBanner />
+
+      {tweakOpen && (
+        <div style={tweakS.panel}>
+          <div style={tweakS.title}>Tweaks</div>
+          {[
+            ['Color primario', 'primaryColor'],
+            ['Color acento',   'accentColor'],
+            ['Fondo oscuro',   'darkBg'],
+          ].map(([label, key]) => (
+            <div key={key} style={tweakS.field}>
+              <label style={tweakS.label}>{label}</label>
+              <div style={tweakS.row}>
+                <input type="color" value={tweaks[key]} onChange={e => updateTweak(key, e.target.value)} style={tweakS.picker} />
+                <span style={tweakS.hex}>{tweaks[key]}</span>
+              </div>
+            </div>
+          ))}
+          <div style={tweakS.field}>
+            <label style={tweakS.label}>Botón WhatsApp</label>
+            <label style={tweakS.toggle}>
+              <input type="checkbox" checked={tweaks.whatsappVisible} onChange={e => updateTweak('whatsappVisible', e.target.checked)} />
+              <span style={{ marginLeft:6, fontSize:13, color:'#5A5A5A' }}>{tweaks.whatsappVisible ? 'Visible' : 'Oculto'}</span>
+            </label>
+          </div>
+          <div style={tweakS.divider} />
+          <div style={tweakS.sectionLabel}>Ir a página</div>
+          <div style={tweakS.pagesGrid}>
+            {[['home','Inicio'],['nosotros','Nosotros'],['licenciaturas','Licenciaturas'],
+              ['ingenierias','Ingenierías'],['maestrias','Maestrías'],['preparatoria','Prepa'],
+              ['admisiones','Admisiones'],['lic-derecho','Derecho'],['ing-robotica','Robótica'],
+              ['ing-ia','IA'],['mba','MBA'],['mie','MIE']
+            ].map(([p,label]) => (
+              <button key={p} style={{...tweakS.pageBtn,...(page===p?tweakS.pageBtnActive:{})}} onClick={()=>navigate(p)}>{label}</button>
+            ))}
+          </div>
+          <div style={tweakS.divider} />
+          <div style={{...tweakS.sectionLabel, marginBottom:6}}>URL actual</div>
+          <div style={{fontFamily:'monospace', fontSize:10, color:'#8A8A8A', wordBreak:'break-all'}}>{window.location.hash || '#/'}</div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+const tweakS = {
+  panel:        { position:'fixed', bottom:20, right:20, background:'#fff', borderRadius:10, boxShadow:'0 8px 32px rgba(0,0,0,0.18)', padding:'20px', width:240, zIndex:9999, fontFamily:"'Figtree',sans-serif", maxHeight:'85vh', overflowY:'auto' },
+  title:        { fontSize:12, fontWeight:700, color:'#1A1A1A', marginBottom:16, textTransform:'uppercase', letterSpacing:'0.07em' },
+  field:        { marginBottom:14 },
+  label:        { fontSize:11, fontWeight:600, color:'#5A5A5A', marginBottom:6, display:'block' },
+  row:          { display:'flex', alignItems:'center', gap:8 },
+  picker:       { width:32, height:28, border:'none', background:'none', cursor:'pointer', padding:0, borderRadius:4 },
+  hex:          { fontSize:11, fontFamily:'monospace', color:'#3D3D3D' },
+  toggle:       { display:'flex', alignItems:'center', cursor:'pointer' },
+  divider:      { height:1, background:'#F0F0F0', margin:'14px 0 10px' },
+  sectionLabel: { fontSize:11, fontWeight:700, color:'#8A8A8A', textTransform:'uppercase', letterSpacing:'0.07em', marginBottom:8 },
+  pagesGrid:    { display:'grid', gridTemplateColumns:'1fr 1fr', gap:4 },
+  pageBtn:      { background:'none', border:'1px solid #E8E8E8', padding:'5px 6px', fontSize:11, color:'#5A5A5A', cursor:'pointer', borderRadius:3, textAlign:'center' },
+  pageBtnActive:{ background:'#E8EDF8', color:'#2B4DA8', fontWeight:600, borderColor:'#2B4DA8' },
+};
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>
