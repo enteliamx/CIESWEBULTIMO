@@ -64,10 +64,13 @@ const homePrograms = [
   { cat: 'Licenciatura', title: 'Derecho', clave: 'RVOE-BC-021-M2/12', color: '#2B4DA8', page: 'lic-derecho', desc: 'Formación jurídica sólida con enfoque en derecho penal, civil y comercial en el contexto fronterizo.' },
   { cat: 'Licenciatura', title: 'Comercio Exterior', clave: 'RVOE-BC-L008-M2/23', color: '#2B4DA8', page: 'lic-comercio', desc: 'Domina los mercados internacionales y la logística global desde la frontera más activa del mundo.' },
   { cat: 'Licenciatura', title: 'Administración de Empresas', clave: 'RVOE-BC-L015-M2/23', color: '#2B4DA8', page: 'lic-administracion', desc: 'Lidera organizaciones con visión estratégica, gestión financiera y habilidades de emprendimiento.' },
+  { cat: 'Licenciatura', title: 'Ciencias de la Educación', clave: 'RVOE-BC-L025-M2/23', color: '#2B4DA8', page: 'lic-educacion', desc: 'Diseña programas educativos, gestiona instituciones y aplica tecnología para transformar la educación.' },
   { cat: 'Ingeniería', title: 'Robótica', clave: 'RVOE-BC-070-M2/15', color: '#0F1E4A', page: 'ing-robotica', desc: 'Diseña y programa sistemas robóticos para la industria manufacturera y de alta tecnología.' },
   { cat: 'Ingeniería', title: 'Inteligencia Artificial', clave: 'RVOE-BC-070-M2/15', color: '#0F1E4A', page: 'ing-ia', desc: 'Machine learning, visión artificial y redes neuronales para las industrias tecnológicas de Tijuana.', clave: 'RVOE-BC-L040-M2/25' },
   { cat: 'Ingeniería', title: 'Mecatrónica', clave: 'RVOE-BC-L039-M2/25', color: '#0F1E4A', page: 'ing-mecatronica', desc: 'Integra mecánica, electrónica e informática para crear sistemas automatizados de alto valor.' },
+  { cat: 'Ingeniería', title: 'Ingeniería Industrial', clave: 'RVOE-BC-L038-M2/25', color: '#0F1E4A', page: 'ing-industrial', desc: 'Optimiza procesos, reduce costes e implementa Lean y Six Sigma en manufactura, logística y servicios.' },
   { cat: 'Posgrado', title: 'MBA', clave: 'RVOE-BC-M001-M2/26', color: '#C23535', page: 'mba', desc: 'Potencia tu carrera directiva con liderazgo, finanzas y estrategia empresarial global.' },
+  { cat: 'Posgrado', title: 'Maestría en Innovación Educativa', clave: 'RVOE-BC-M002-M2/23', color: '#C23535', page: 'mie', desc: 'Transforma la práctica educativa con metodologías innovadoras, tecnología y gestión del cambio.' },
   { cat: 'Preparatoria', title: 'Preparatoria CIES', clave: 'RVOE CBBC-406/94-1', color: '#3D3D3D', page: 'preparatoria', desc: 'Incorporada al sistema COBACH. Modalidad escolarizada y modalidad 2 años para adultos.' },
 ];
 
