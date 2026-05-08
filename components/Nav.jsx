@@ -4,18 +4,21 @@
 const DropItem = ({ item, active, onNav }) => {
   const [hover, setHover] = React.useState(false);
   return (
-    <button
+    <a
+      href={'/' + item.page}
       style={{
         ...navS.dropItem,
+        ...(hover ? navS.dropItemHover : {}),
         ...(active ? navS.dropItemActive : {}),
-        ...(hover && !active ? navS.dropItemHover : {}),
+        cursor: 'pointer',
+        textDecoration: 'none',
       }}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
-      onClick={() => onNav(item.page)}
+      onClick={(e) => { e.preventDefault(); onNav(item.page); }}
     >
       {item.label}
-    </button>
+    </a>
   );
 };
 
