@@ -137,7 +137,7 @@ const NivelesSection = ({ onNavigate }) => {
   ];
   return (
     <section style={{ background: '#fff', padding: '72px 0', borderTop: '1px solid #F0F0F0' }}>
-      <div style={hpS.inner}>
+      <div style={{ maxWidth: 1400, margin: '0 auto', padding: '0 24px' }}>
         <div style={hpS.sectionHead}>
           <div style={hpS.eyebrow}>Tres niveles educativos</div>
           <h2 style={hpS.sectionTitle}>Una institución, toda tu trayectoria</h2>
