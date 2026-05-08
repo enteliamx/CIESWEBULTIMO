@@ -83,11 +83,11 @@ const ProgramsGrid = ({ onNavigate }) => {
         </div>
         <div style={hpS.grid} className="programs-grid">
           {homePrograms.map((p, i) => (
-            <div key={i}
-              style={{ ...hpS.card, ...(hover === i ? hpS.cardHover : {}) }}
+            <a key={i}
+              href={window.CIES_NAV ? window.CIES_NAV[p.page] : '#'}
+              style={{ ...hpS.card, ...(hover === i ? hpS.cardHover : {}), textDecoration:'none', color:'inherit', display:'block' }}
               onMouseEnter={() => setHover(i)}
               onMouseLeave={() => setHover(null)}
-              onClick={() => onNavigate(p.page)}
             >
               <div style={{ ...hpS.cardAccent, background: p.color }} />
               <div style={hpS.cardBody}>
@@ -96,7 +96,7 @@ const ProgramsGrid = ({ onNavigate }) => {
                 <div style={hpS.cardDesc}>{p.desc}</div>
                 <div style={{ ...hpS.cardLink, color: p.color }}>Ver programa →</div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
         <div style={{ textAlign: 'center', marginTop: 40 }}>
