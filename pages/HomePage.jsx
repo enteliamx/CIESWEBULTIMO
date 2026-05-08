@@ -15,7 +15,7 @@ const HomePage = ({ onNavigate }) => {
   );
 };
 
-// ── Hero ────────────────────────────────────────────────
+// ── Hero ───────────────────────────────────────────────
 const HeroSection = ({ onNavigate }) => (
   <section style={hpS.hero}>
     <div style={hpS.heroOverlay} />
@@ -117,10 +117,16 @@ const NivelesSection = ({ onNavigate }) => {
       color: '#2B4DA8', page: 'preparatoria',
     },
     {
-      nivel: 'Universidad', icon: '◉',
-      desc: '4 licenciaturas y 4 ingenierías con RVOE SEP. Enfoque práctico y docentes en activo.',
-      programas: ['Derecho', 'Comercio Exterior', 'Administración', 'Robótica', 'IA', 'Mecatrónica', '+más'],
+      nivel: 'Licenciaturas', icon: '◉',
+      desc: '4 licenciaturas con RVOE SEP. Derecho, Comercio Exterior, Administración y Educación.',
+      programas: ['Derecho', 'Comercio Exterior', 'Administración', 'Ciencias de la Educación'],
       color: '#0F1E4A', page: 'licenciaturas',
+    },
+    {
+      nivel: 'Ingenierías', icon: '◉',
+      desc: '4 ingenierías con RVOE SEP. Robótica, IA, Mecatrónica e Industrial. Industria 4.0.',
+      programas: ['Robótica', 'Inteligencia Artificial', 'Mecatrónica', 'Ing. Industrial'],
+      color: '#0F3A6B', page: 'ingenierias',
     },
     {
       nivel: 'Posgrado', icon: '◉',
@@ -137,7 +143,7 @@ const NivelesSection = ({ onNavigate }) => {
           <h2 style={hpS.sectionTitle}>Una institución, toda tu trayectoria</h2>
           <p style={hpS.sectionSub}>Desde la preparatoria hasta el posgrado, CIES acompaña tu desarrollo profesional en cada etapa.</p>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 24 }} className="niveles-grid">
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 24 }} className="niveles-grid">
           {niveles.map((n, i) => (
             <div key={i} style={{ background: n.color, borderRadius: 10, padding: '36px 28px', cursor: 'pointer', transition: 'transform 0.2s, box-shadow 0.2s' }}
               onClick={() => onNavigate(n.page)}
