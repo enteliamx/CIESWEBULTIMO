@@ -155,12 +155,12 @@ const Nav = ({ currentPage, onNavigate }) => {
           {navGroups.map(group => (
             <div key={group.id}>
               {group.page ? (
-                <button style={navS.mobileLink} onClick={() => handleNav(group.page)}>{group.label}</button>
+                <a href={window.CIES_NAV ? window.CIES_NAV[group.page] : '#'} style={{...navS.mobileLink, textDecoration:'none', display:'block'}}>{group.label}</a>
               ) : (
                 <>
                   <div style={navS.mobileGroup}>{group.label}</div>
                   {group.children.map(c => (
-                    <button key={c.page} style={navS.mobileChild} onClick={() => handleNav(c.page)}>{c.label}</button>
+                    <a key={c.page} href={window.CIES_NAV ? window.CIES_NAV[c.page] : '#'} style={{...navS.mobileChild, textDecoration:'none', display:'block'}}>{c.label}</a>
                   ))}
                 </>
               )}
