@@ -1,4 +1,4 @@
-ñ// Universidad CIES — Maestrías, Preparatoria, Admisiones, Categorías
+// Universidad CIES — Maestrías, Preparatoria, Admisiones, Categorías
 
 const WA = 'https://wa.me/526644901395';
 
