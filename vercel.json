@@ -1,4 +1,22 @@
 {
-  "cleanUrls": true,
-  "trailingSlash": false
+    "cleanUrls": true,
+    "trailingSlash": false,
+    "redirects": [
+          { "source": "/licenciaturas", "destination": "/licenciaturas-tijuana-baja-california", "permanent": true },
+          { "source": "/ingenierias", "destination": "/ingenierias-tijuana-baja-california", "permanent": true },
+          { "source": "/nosotros", "destination": "/universidad-cies-tijuana", "permanent": true },
+          { "source": "/preparatoria", "destination": "/preparatoria-tijuana-certificado-sep", "permanent": true },
+          { "source": "/admisiones", "destination": "/admisiones-universidad-tijuana", "permanent": true },
+          { "source": "/maestrias", "destination": "/maestrias-ejecutivas-tijuana", "permanent": true },
+          { "source": "/mba", "destination": "/mba-ejecutivo-tijuana", "permanent": true },
+          { "source": "/maestria-innovacion-educativa", "destination": "/maestria-innovacion-educativa-tijuana", "permanent": true },
+          { "source": "/derecho", "destination": "/licenciatura-en-derecho-tijuana", "permanent": true },
+          { "source": "/comercio-exterior", "destination": "/licenciatura-comercio-exterior-aduanas-tijuana", "permanent": true },
+          { "source": "/administracion", "destination": "/licenciatura-administracion-empresas-tijuana", "permanent": true },
+          { "source": "/ciencias-educacion", "destination": "/licenciatura-ciencias-educacion-tijuana", "permanent": true },
+          { "source": "/ingenieria-robotica", "destination": "/ingenieria-robotica-ia-tijuana", "permanent": true },
+          { "source": "/ingenieria-ia", "destination": "/ingenieria-inteligencia-artificial-tijuana", "permanent": true },
+          { "source": "/ingenieria-mecatronica", "destination": "/ingenieria-mecatronica-tijuana", "permanent": true },
+          { "source": "/ingenieria-industrial", "destination": "/ingenieria-industrial-tijuana", "permanent": true }
+    ]
 }
