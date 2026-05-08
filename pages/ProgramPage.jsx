@@ -8,6 +8,15 @@ const ProgramPage = ({ program, onNavigate }) => {
 
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
+        "@context":"https://schema.org","@type":"Course",
+        "name": program.title + " — Universidad CIES Tijuana",
+        "description": program.subtitle,
+        "provider":{"@type":"EducationalOrganization","@id":"https://www.universidadcies.mx/#organization","name":"Universidad CIES","address":{"@type":"PostalAddress","addressLocality":"Tijuana","addressRegion":"Baja California","addressCountry":"MX"}},
+        "courseCode": program.clave,
+        "educationalCredentialAwarded": program.categoryLabel,
+        "inLanguage":"es-MX"
+      })}} />
       {/* ── Header ── */}
       <div style={ppS.header}>
         <div style={ppS.headerInner} className="pp-header-inner">
