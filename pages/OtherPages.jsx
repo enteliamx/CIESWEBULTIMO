@@ -1,4 +1,4 @@
-// Universidad CIES — Maestrías, Preparatoria, Admisiones, Categorías
+ñ// Universidad CIES — Maestrías, Preparatoria, Admisiones, Categorías
 
 const WA = 'https://wa.me/526644901395';
 
@@ -320,7 +320,7 @@ const PreparatoriaPage = ({ onNavigate }) => (
               <p style={prepS.cardSub}>Termina el bachillerato en la mitad de tiempo</p>
             </div>
             <div style={prepS.cardBody}>
-              {[['RVOE','RVOE-BC-019-M2/12'],['Duración','2 años'],['Modalidad','Presencial'],['Horario','Fines de semana'],['Edad mínima','16 años cumplidos al ingresar'],['Certificado','Válido ante la SEP']].map(([l,v],i)=>(
+              {[['RVOE','RVOE-BC-019-M2/12'],['Duración','2 años'],['Modalidad','Presencial'],['Horario','Fines de semana'],['Certificado','Válido ante la SEP']].map(([l,v],i)=>(
                 <div key={i} style={prepS.infoRow}><span style={prepS.infoL}>{l}</span><span style={prepS.infoV}>{v}</span></div>
               ))}
               {['Ideal para quienes trabajan o tienen otras actividades','Sábados y domingos con horario accesible','Mismo certificado con validez oficial ante la SEP','Sin límite superior de edad para ingresar','Grupos pequeños con atención personalizada','Posibilidad de continuar con licenciatura en CIES'].map((f,i)=>(
