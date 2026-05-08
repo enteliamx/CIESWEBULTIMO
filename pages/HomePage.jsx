@@ -143,9 +143,9 @@ const NivelesSection = ({ onNavigate }) => {
           <h2 style={hpS.sectionTitle}>Una institución, toda tu trayectoria</h2>
           <p style={hpS.sectionSub}>Desde la preparatoria hasta el posgrado, CIES acompaña tu desarrollo profesional en cada etapa.</p>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 24 }} className="niveles-grid">
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 24, alignItems: 'stretch' }} className="niveles-grid">
           {niveles.map((n, i) => (
-            <div key={i} style={{ background: n.color, borderRadius: 10, padding: '36px 28px', cursor: 'pointer', transition: 'transform 0.2s, box-shadow 0.2s' }}
+            <div key={i} style={{ background: n.color, borderRadius: 10, padding: '36px 28px', cursor: 'pointer', transition: 'transform 0.2s, box-shadow 0.2s', display:'flex', flexDirection:'column' }}
               onClick={() => onNavigate(n.page)}
               onMouseEnter={e => { e.currentTarget.style.transform='translateY(-3px)'; e.currentTarget.style.boxShadow='0 10px 32px rgba(0,0,0,0.18)'; }}
               onMouseLeave={e => { e.currentTarget.style.transform='none'; e.currentTarget.style.boxShadow='none'; }}
@@ -158,7 +158,7 @@ const NivelesSection = ({ onNavigate }) => {
                   <span key={j} style={{ background:'rgba(255,255,255,0.15)', fontFamily:"'Figtree',sans-serif", fontSize:12, fontWeight:600, color:'#fff', padding:'4px 10px', borderRadius:3 }}>{p}</span>
                 ))}
               </div>
-              <div style={{ marginTop:24, fontFamily:"'Figtree',sans-serif", fontSize:13, fontWeight:700, color:'rgba(255,255,255,0.9)' }}>Ver programas →</div>
+              <div style={{ marginTop:'auto', paddingTop:24, fontFamily:"'Figtree',sans-serif", fontSize:13, fontWeight:700, color:'rgba(255,255,255,0.9)' }}>Ver programas →</div>
             </div>
           ))}
         </div>
