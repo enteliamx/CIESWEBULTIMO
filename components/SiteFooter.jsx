@@ -61,7 +61,7 @@ const SiteFooter = ({ onNavigate }) => {
           <div style={fS.col}>
             <div style={fS.colTitle}>Licenciaturas</div>
             {licenciaturas.map(l => (
-              <button key={l.page} style={fS.link} onClick={() => onNavigate(l.page)}>{l.label}</button>
+              <a key={l.page} href={window.CIES_NAV ? window.CIES_NAV[l.page] : '#'} style={{...fS.link, textDecoration:'none', display:'block'}}>{l.label}</a>
             ))}
           </div>
 
@@ -69,7 +69,7 @@ const SiteFooter = ({ onNavigate }) => {
           <div style={fS.col}>
             <div style={fS.colTitle}>Ingenierías</div>
             {ingenierias.map(l => (
-              <button key={l.page} style={fS.link} onClick={() => onNavigate(l.page)}>{l.label}</button>
+              <a key={l.page} href={window.CIES_NAV ? window.CIES_NAV[l.page] : '#'} style={{...fS.link, textDecoration:'none', display:'block'}}>{l.label}</a>
             ))}
           </div>
 
@@ -77,7 +77,7 @@ const SiteFooter = ({ onNavigate }) => {
           <div style={fS.col}>
             <div style={fS.colTitle}>Institución</div>
             {institucion.map(l => (
-              <button key={l.page} style={fS.link} onClick={() => onNavigate(l.page)}>{l.label}</button>
+              <a key={l.page} href={window.CIES_NAV ? window.CIES_NAV[l.page] : '#'} style={{...fS.link, textDecoration:'none', display:'block'}}>{l.label}</a>
             ))}
             <button style={fS.ctaBtn} onClick={() => onNavigate('admisiones')}>Solicitar información</button>
           </div>
@@ -107,7 +107,7 @@ const fS = {
   socialBtn: { width:34, height:34, background:'rgba(255,255,255,0.1)', borderRadius:6, display:'flex', alignItems:'center', justifyContent:'center', color:'#fff', textDecoration:'none', transition:'background 0.2s' },
   col: { display:'flex', flexDirection:'column', gap:8 },
   colTitle: { fontFamily:"'Figtree',sans-serif", fontSize:11, fontWeight:700, letterSpacing:'0.08em', textTransform:'uppercase', color:'#fff', marginBottom:6 },
-  link: { background:'none', border:'none', textAlign:'left', fontFamily:"'Figtree',sans-serif", fontSize:14, color:'rgba(255,255,255,0.6)', cursor:'pointer', padding:'2px 0', lineHeight:1.5 },
+  link: { textAlign:'left', fontFamily:"'Figtree',sans-serif", fontSize:14, color:'rgba(255,255,255,0.6)', padding:'2px 0', lineHeight:1.5 },
   ctaBtn: { background:'#C23535', color:'#fff', fontFamily:"'Figtree',sans-serif", fontWeight:600, fontSize:13, padding:'10px 16px', borderRadius:4, border:'none', cursor:'pointer', marginTop:10, textAlign:'center' },
   bottom: { padding:'20px 0', display:'flex', justifyContent:'space-between', alignItems:'center', flexWrap:'wrap', gap:8 },
   copy: { fontFamily:"'Figtree',sans-serif", fontSize:13, color:'rgba(255,255,255,0.35)' },
