@@ -67,6 +67,7 @@ const Nav = ({ currentPage, onNavigate }) => {
     },
     { id: 'preparatoria', label: 'Preparatoria', page: 'preparatoria' },
     { id: 'admisiones', label: 'Admisiones', page: 'admisiones' },
+  { id: 'blog', label: 'Blog', page: 'blog' },
   ];
 
   const openDropdown = (id) => {
