@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="preload" href="../../fonts/Figtree-Bold.ttf" as="font" type="font/truetype" crossorigin="anonymous">
+  <link rel="icon" type="image/png" href="../../assets/LOGO_UNI_CIES_1.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @font-face{font-family:'Varsity Impact';src:url('../../fonts/Varsity-Impact-Bold.otf') format('opentype');font-weight:700}
+    @font-face{font-family:'Varsity Impact';src:url('../../fonts/Varsity-Impact-Extrabold.otf') format('opentype');font-weight:800}
+    @font-face{font-family:'Figtree';src:url('../../fonts/Figtree-Regular.ttf') format('truetype');font-weight:400}
+    @font-face{font-family:'Figtree';src:url('../../fonts/Figtree-Medium.ttf') format('truetype');font-weight:500}
+    @font-face{font-family:'Figtree';src:url('../../fonts/Figtree-SemiBold.ttf') format('truetype');font-weight:600}
+    @font-face{font-family:'Figtree';src:url('../../fonts/Figtree-Bold.ttf') format('truetype');font-weight:700}
+    @font-face{font-family:'Figtree';src:url('../../fonts/Figtree-ExtraBold.ttf') format('truetype');font-weight:800}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Figtree',system-ui,sans-serif;background:#fff;color:#1A1A1A;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    #root{overflow-x:hidden}
+    article h2{font-family:'Varsity Impact',sans-serif;font-size:1.4rem;color:#1a1f3c;margin:2rem 0 0.75rem}
+    article h3{font-size:1.1rem;font-weight:700;color:#1a1f3c;margin:1.5rem 0 0.5rem}
+    article p{margin-bottom:1rem}
+    article ul{margin:0.5rem 0 1rem 1.5rem}
+    article li{margin-bottom:0.4rem}
+    article strong{color:#1a1f3c}
+  </style>
+  <title>Qué hace un agente aduanal y cómo estudiar Comercio Exterior en Tijuana — Blog Universidad CIES</title>
+  <meta name="description" content="Todo sobre la carrera de agente aduanal en Tijuana: funciones, requisitos, dónde estudiar y por qué la frontera México-EU es el mejor contexto para formarte.">
+  <link rel="canonical" href="https://universidadcies.mx/blog/agente-aduanal-tijuana-comercio-exterior/">
+  <meta property="og:title" content="Qué hace un agente aduanal y cómo estudiar Comercio Exterior en Tijuana">
+  <meta property="og:description" content="Todo sobre la carrera de agente aduanal en Tijuana: funciones, requisitos, dónde estudiar y por qué la frontera México-EU es el mejor contexto para formarte.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://universidadcies.mx/blog/agente-aduanal-tijuana-comercio-exterior/">
+  <meta property="og:locale" content="es_MX">
+  <meta name="article:section" content="Licenciaturas">
+  <meta name="article:published_time" content="2025-05-08">
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin></script>
+  <script src="../../components/Shared.jsx" type="text/babel"></script>
+  <script src="../../components/Nav.jsx" type="text/babel"></script>
+  <script src="../../components/SiteFooter.jsx" type="text/babel"></script>
+  <script src="../posts-data-p1.jsx" type="text/babel"></script>
+  <script src="../posts-data-p2.jsx" type="text/babel"></script>
+  <script src="../posts-data-p3.jsx" type="text/babel"></script>
+  <script src="../BlogPost.jsx" type="text/babel"></script>
+  <script type="text/babel">
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    const nav = (page) => { window.location.href = page === 'home' ? '/' : '/' + page + '/'; };
+    root.render(React.createElement(BlogPostPage, {onNavigate: nav}));
+  </script>
+</body>
+</html>
