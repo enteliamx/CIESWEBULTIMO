@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <link rel="preconnect" href="https://unpkg.com" crossorigin>
-  <link rel="preload" href="../../fonts/Figtree-Bold.ttf" as="font" type="font/truetype" crossorigin="anonymous">
-  <link rel="icon" type="image/png" href="../../assets/LOGO_UNI_CIES_1.png">
+  <link rel="preload" href="/fonts/Figtree-Bold.ttf" as="font" type="font/truetype" crossorigin="anonymous">
+  <link rel="icon" type="image/png" href="/assets/LOGO_UNI_CIES_1.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    @font-face{font-family:'Varsity Impact';src:url('../../fonts/Varsity-Impact-Bold.otf') format('opentype');font-weight:700}
-    @font-face{font-family:'Varsity Impact';src:url('../../fonts/Varsity-Impact-Extrabold.otf') format('opentype');font-weight:800}
-    @font-face{font-family:'Figtree';src:url('../../fonts/Figtree-Regular.ttf') format('truetype');font-weight:400}
-    @font-face{font-family:'Figtree';src:url('../../fonts/Figtree-Medium.ttf') format('truetype');font-weight:500}
-    @font-face{font-family:'Figtree';src:url('../../fonts/Figtree-SemiBold.ttf') format('truetype');font-weight:600}
-    @font-face{font-family:'Figtree';src:url('../../fonts/Figtree-Bold.ttf') format('truetype');font-weight:700}
-    @font-face{font-family:'Figtree';src:url('../../fonts/Figtree-ExtraBold.ttf') format('truetype');font-weight:800}
+    @font-face{font-family:'Varsity Impact';src:url('/fonts/Varsity-Impact-Bold.otf') format('opentype');font-weight:700}
+    @font-face{font-family:'Varsity Impact';src:url('/fonts/Varsity-Impact-Extrabold.otf') format('opentype');font-weight:800}
+    @font-face{font-family:'Figtree';src:url('/fonts/Figtree-Regular.ttf') format('truetype');font-weight:400}
+    @font-face{font-family:'Figtree';src:url('/fonts/Figtree-Medium.ttf') format('truetype');font-weight:500}
+    @font-face{font-family:'Figtree';src:url('/fonts/Figtree-SemiBold.ttf') format('truetype');font-weight:600}
+    @font-face{font-family:'Figtree';src:url('/fonts/Figtree-Bold.ttf') format('truetype');font-weight:700}
+    @font-face{font-family:'Figtree';src:url('/fonts/Figtree-ExtraBold.ttf') format('truetype');font-weight:800}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
     body{font-family:'Figtree',system-ui,sans-serif;background:#fff;color:#1A1A1A;-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -41,13 +41,13 @@
   <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin></script>
-  <script src="../../components/Shared.jsx" type="text/babel"></script>
-  <script src="../../components/Nav.jsx" type="text/babel"></script>
-  <script src="../../components/SiteFooter.jsx" type="text/babel"></script>
-  <script src="../posts-data-p1.jsx" type="text/babel"></script>
-  <script src="../posts-data-p2.jsx" type="text/babel"></script>
-  <script src="../posts-data-p3.jsx" type="text/babel"></script>
-  <script src="../BlogPost.jsx" type="text/babel"></script>
+  <script src="/components/Shared.jsx" type="text/babel"></script>
+  <script src="/components/Nav.jsx" type="text/babel"></script>
+  <script src="/components/SiteFooter.jsx" type="text/babel"></script>
+  <script src="/blog/posts-data-p1.jsx" type="text/babel"></script>
+  <script src="/blog/posts-data-p2.jsx" type="text/babel"></script>
+  <script src="/blog/posts-data-p3.jsx" type="text/babel"></script>
+  <script src="/blog/BlogPost.jsx" type="text/babel"></script>
   <script type="text/babel">
     const root = ReactDOM.createRoot(document.getElementById('root'));
     const nav = (page) => { window.location.href = page === 'home' ? '/' : '/' + page + '/'; };
