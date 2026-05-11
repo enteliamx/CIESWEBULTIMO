@@ -89,7 +89,7 @@ window.BLOG_POSTS = (window.BLOG_POSTS || []).concat([
 <p>Al concluir los 10 cuatrimestres y cubrir el total de créditos (357 créditos en 50 materias), el egresado obtiene el título de <strong>Licenciado en Derecho</strong> con cédula profesional SEP. Posteriormente puede especializarse mediante una maestría, o bien habilitar su práctica profesional directamente ante los tribunales de Baja California.</p>
 
 <h2>¿Dónde está ubicada Universidad CIES?</h2>
-<p>Las instalaciones se encuentran en Blvd. Federico Benítez 5, Tijuana, Baja California. Para información sobre admisiones, horarios y costos puedes comunicarte por WhatsApp al (664) 490-1395 o escribir a contacto@universidadcies.com.</p>
+<p>Las instalaciones se encuentran en Blvd. Federico Benítez 5, Tijuana, Baja California. Para información sobre admisiones, horarios y costos puedes comunicarte por WhatsApp al (664) 490-1395 o escribir a contacto@universidadcies.mx.</p>
 `
   },
   {
