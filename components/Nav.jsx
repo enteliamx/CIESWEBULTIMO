@@ -28,7 +28,7 @@ const Nav = ({ currentPage, onNavigate }) => {
   const [menuOpen, setMenuOpen] = React.useState(false);
   const [dropdown, setDropdown] = React.useState(null);
   const [scrolled, setScrolled] = React.useState(false);
-  const logoSrc = (window.CIES_BASE ? window.CIES_BASE + '/' : '') + 'assets/LOGO_CIES_HORIZONTAL_OFICIAL.png';
+  const logoSrc = '/assets/LOGO_CIES_HORIZONTAL_OFICIAL.png'
   const logoWhite = (window.CIES_BASE ? window.CIES_BASE + '/' : '') + 'assets/LOGO_CIES_HORIZONTAL_BLANCO.png';
   const [hoveredLink, setHoveredLink] = React.useState(null);
   const closeTimer = React.useRef(null);
@@ -161,7 +161,7 @@ const Nav = ({ currentPage, onNavigate }) => {
           {navGroups.map(group => (
             <div key={group.id}>
               {group.page ? (
-                <a href={group.page === 'blog' ? '/blog/' : (window.CIES_NAV ? window.CIES_NAV[group.page] : '#')} style={{...navS.mobileLink, textDecoration:'none', display:'block'}}>{group.label}</a>
+                <a href={group.page === 'blog' ? '/blog/' : group.page === 'home' ? '/' : ('/' + group.page + '/')} onClick={(e) => { e.preventDefault(); handleNav(group.page); }} style={{...navS.mobileLink, textDecoration:'none', display:'block'}}>{group.label}</a>
               ) : (
                 <>
                   <div style={navS.mobileGroup}>{group.label}</div>
