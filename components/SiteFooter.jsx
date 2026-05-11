@@ -41,6 +41,9 @@ const SiteFooter = ({ onNavigate }) => {
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-.54a2 2 0 012.11.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
                 <a href={WA} target="_blank" rel="noopener noreferrer" style={{ color:'rgba(255,255,255,0.58)', textDecoration:'none' }}>(664) 490-1395</a>
               </div>
+              <div style={{display:'flex', alignItems:'center', gap:8, marginTop:4}}>
+                <a href="mailto:contacto@universidadcies.mx" style={{color:'rgba(255,255,255,0.75)', fontSize:14, textDecoration:'none'}}>contacto@universidadcies.mx</a>
+              </div>
             </div>
 
             {/* Redes sociales */}
