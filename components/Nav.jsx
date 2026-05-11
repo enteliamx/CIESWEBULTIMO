@@ -1,3 +1,4 @@
+// Nav v2 - blog mobile fix
 // Universidad CIES — Navbar con dropdowns (fixed)
 
 // Dropdown item with hover highlight
