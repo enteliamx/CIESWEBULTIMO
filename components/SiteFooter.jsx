@@ -28,7 +28,7 @@ const SiteFooter = ({ onNavigate }) => {
         <div style={fS.top} className="footer-grid">
           {/* Brand col */}
           <div style={fS.brand}>
-            <img src={(window.CIES_BASE ? window.CIES_BASE + '/' : '') + 'assets/LOGO_CIES_HORIZONTAL_BLANCO.png'} alt="Universidad CIES" style={fS.logo} />
+            <img src={'/assets/LOGO_CIES_HORIZONTAL_BLANCO.png'} alt="Universidad CIES" style={fS.logo} />
             <p style={fS.tagline}>Formando profesionistas para el mundo real desde hace más de 30 años en Tijuana, México.</p>
 
             {/* Contacto */}
