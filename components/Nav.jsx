@@ -160,7 +160,7 @@ const Nav = ({ currentPage, onNavigate }) => {
           {navGroups.map(group => (
             <div key={group.id}>
               {group.page ? (
-                <a href={window.CIES_NAV ? window.CIES_NAV[group.page] : '#'} style={{...navS.mobileLink, textDecoration:'none', display:'block'}}>{group.label}</a>
+                <a href={group.page === 'blog' ? '/blog/' : (window.CIES_NAV ? window.CIES_NAV[group.page] : '#')} style={{...navS.mobileLink, textDecoration:'none', display:'block'}}>{group.label}</a>
               ) : (
                 <>
                   <div style={navS.mobileGroup}>{group.label}</div>
