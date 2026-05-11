@@ -80,6 +80,7 @@ const Nav = ({ currentPage, onNavigate }) => {
   };
 
   const handleNav = (page) => {
+    if (page === 'blog') { window.location.href = '/blog/'; return; }
     setMenuOpen(false);
     setDropdown(null);
     if (closeTimer.current) clearTimeout(closeTimer.current);
