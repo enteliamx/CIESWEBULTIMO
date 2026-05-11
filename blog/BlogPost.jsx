@@ -13,7 +13,7 @@ const BlogPostPage = ({ onNavigate }) => {
       desc.content = post.description;
       let canon = document.querySelector('link[rel="canonical"]');
       if (!canon) { canon = document.createElement('link'); canon.rel = 'canonical'; document.head.appendChild(canon); }
-      canon.href = 'https://universidadcies.mx/blog/' + post.slug + '/';
+      canon.href = 'https://www.universidadcies.mx/blog/' + post.slug + '/';
     }
   }, [post]);
 
@@ -31,8 +31,8 @@ const BlogPostPage = ({ onNavigate }) => {
     "dateModified": post.date,
     "author": {"@type":"Organization","name":"Universidad CIES","url":"https://www.universidadcies.mx"},
     "publisher": {"@type":"Organization","name":"Universidad CIES","logo":{"@type":"ImageObject","url":"https://www.universidadcies.mx/assets/LOGO_CIES_HORIZONTAL_OFICIAL.png"}},
-    "mainEntityOfPage": {"@type":"WebPage","@id":"https://universidadcies.mx/blog/"+post.slug+"/"},
-    "url": "https://universidadcies.mx/blog/"+post.slug+"/",
+    "mainEntityOfPage": {"@type":"WebPage","@id":"https://www.universidadcies.mx/blog/"+post.slug+"/"},
+    "url": "https://www.universidadcies.mx/blog/"+post.slug+"/",
     "inLanguage": "es-MX",
     "about": {"@type":"Course","name":post.program,"provider":{"@type":"EducationalOrganization","name":"Universidad CIES","address":{"@type":"PostalAddress","addressLocality":"Tijuana","addressRegion":"BC","addressCountry":"MX"}}}
   };
