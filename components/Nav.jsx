@@ -26,6 +26,12 @@ const DropItem = ({ item, active, onNav }) => {
 // Main Nav component
 const Nav = ({ currentPage, onNavigate }) => {
   const [menuOpen, setMenuOpen] = React.useState(false);
+  const [isMobile, setIsMobile] = React.useState(window.innerWidth <= 900);
+  React.useEffect(() => {
+    const onResize = () => setIsMobile(window.innerWidth <= 900);
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
   const [dropdown, setDropdown] = React.useState(null);
   const [scrolled, setScrolled] = React.useState(false);
   const logoSrc = (window.CIES_BASE ? window.CIES_BASE + '/' : '') + 'assets/LOGO_CIES_HORIZONTAL_OFICIAL.png';
@@ -142,7 +148,7 @@ const Nav = ({ currentPage, onNavigate }) => {
           ))}
         </nav>
 
-        <button style={navS.cta} className="nav-cta-desktop" onClick={() => handleNav('admisiones')}>Inscríbete</button>
+        <button style={navS.cta} className="nav-cta-desktop" style={{display: isMobile ? 'none' : undefined}} onClick={() => handleNav('admisiones')}>Inscríbete</button>
 
         {/* Burger */}
         <button style={navS.burger} className="nav-burger" onClick={() => setMenuOpen(!menuOpen)}>
@@ -195,7 +201,7 @@ const navS = {
   header: { position:'sticky', top:0, zIndex:200, background:'#fff', transition:'box-shadow 0.2s ease' },
   inner: { maxWidth:1200, margin:'0 auto', padding:'0 24px', height:72, display:'flex', alignItems:'center', gap:0 },
   logo: { height:36, objectFit:'contain', flexShrink:0, cursor:'pointer', marginRight:32 },
-  nav: { display:'flex', gap:2, flex:1, alignItems:'center' },
+  nav: { display: isMobile ? 'none' : 'flex', gap:2, flex:1, alignItems:'center' },
   navItem: { position:'relative' },
   navLink: { fontFamily:"'Figtree',sans-serif", fontSize:14, fontWeight:500, color:'#3D3D3D', background:'none', border:'none', cursor:'pointer', padding:'8px 12px', borderRadius:4, display:'flex', alignItems:'center', gap:4, transition:'color 0.15s,background 0.15s', whiteSpace:'nowrap' },
   navLinkHover: { background:'#F0F3FA', color:'#2B4DA8' },
@@ -206,7 +212,7 @@ const navS = {
   dropItemHover: { background:'#F0F3FA', color:'#2B4DA8' },
   dropItemActive: { background:'#E8EDF8', color:'#2B4DA8', fontWeight:600 },
   cta: { background:'#C23535', color:'#fff', fontFamily:"'Figtree',sans-serif", fontWeight:600, fontSize:14, padding:'9px 22px', borderRadius:4, border:'none', cursor:'pointer', flexShrink:0, marginLeft:16, transition:'background 0.2s' },
-  burger: { display:'none', background:'none', border:'none', cursor:'pointer', padding:4, marginLeft:'auto' },
+  burger: { display: isMobile ? 'flex' : 'none', background:'none', border:'none', cursor:'pointer', padding:4, marginLeft:'auto' },
   mobile: { background:'#fff', borderTop:'1px solid #E8E8E8', padding:'12px 24px 20px', display:'flex', flexDirection:'column' },
   mobileLink: { background:'none', border:'none', textAlign:'left', width:'100%', fontFamily:"'Figtree',sans-serif", fontSize:15, fontWeight:500, color:'#1A1A1A', padding:'12px 0', borderBottom:'1px solid #F0F0F0', cursor:'pointer' },
   mobileGroup: { fontFamily:"'Figtree',sans-serif", fontSize:11, fontWeight:700, color:'#8A8A8A', letterSpacing:'0.08em', textTransform:'uppercase', padding:'14px 0 4px' },
