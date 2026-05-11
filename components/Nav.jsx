@@ -39,7 +39,26 @@ const Nav = ({ currentPage, onNavigate }) => {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const navGroups = [
+  const NAV_URLS = window.CIES_NAV || {
+  home: '/', nosotros: '/universidad-cies-tijuana/',
+  licenciaturas: '/licenciaturas-tijuana-baja-california/',
+  'lic-derecho': '/licenciatura-en-derecho-tijuana/',
+  'lic-comercio': '/licenciatura-comercio-exterior-aduanas-tijuana/',
+  'lic-administracion': '/licenciatura-administracion-empresas-tijuana/',
+  'lic-educacion': '/licenciatura-ciencias-educacion-tijuana/',
+  ingenierias: '/ingenierias-tijuana-baja-california/',
+  'ing-robotica': '/ingenieria-robotica-ia-tijuana/',
+  'ing-ia': '/ingenieria-inteligencia-artificial-tijuana/',
+  'ing-mecatronica': '/ingenieria-mecatronica-tijuana/',
+  'ing-industrial': '/ingenieria-industrial-tijuana/',
+  maestrias: '/maestrias-ejecutivas-tijuana/',
+  mba: '/mba-ejecutivo-tijuana/',
+  mie: '/maestria-innovacion-educativa-tijuana/',
+  preparatoria: '/preparatoria-tijuana-certificado-sep/',
+  admisiones: '/admisiones-universidad-tijuana/',
+  blog: '/blog/'
+};
+const navGroups = [
     { id: 'nosotros', label: 'Nosotros', page: 'nosotros' },
     {
       id: 'licenciaturas', label: 'Licenciaturas',
@@ -161,12 +180,12 @@ const Nav = ({ currentPage, onNavigate }) => {
           {navGroups.map(group => (
             <div key={group.id}>
               {group.page ? (
-                <a href={group.page === 'blog' ? '/blog/' : group.page === 'home' ? '/' : ('/' + group.page + '/')} onClick={(e) => { e.preventDefault(); handleNav(group.page); }} style={{...navS.mobileLink, textDecoration:'none', display:'block'}}>{group.label}</a>
+                <a href={group.page === 'blog' ? '/blog/' : group.page === 'home' ? '/' : ('/' + group.page + '/')} onClick={() => { setMenuOpen(false); }} style={{...navS.mobileLink, textDecoration:'none', display:'block'}}>{group.label}</a>
               ) : (
                 <>
                   <div style={navS.mobileGroup}>{group.label}</div>
                   {group.children.map(c => (
-                    <a key={c.page} href={window.CIES_NAV ? window.CIES_NAV[c.page] : '#'} style={{...navS.mobileChild, textDecoration:'none', display:'block'}}>{c.label}</a>
+                    <a key={c.page} href={NAV_URLS[c.page] || '#'} style={{...navS.mobileChild, textDecoration:'none', display:'block'}}>{c.label}</a>
                   ))}
                 </>
               )}
