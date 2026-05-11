@@ -26,7 +26,7 @@ const BlogIndexPage = ({ onNavigate }) => {
 
   const schemaList = {
     "@context":"https://schema.org","@type":"Blog",
-    "name":"Blog Universidad CIES","url":"https://universidadcies.mx/blog/",
+    "name":"Blog Universidad CIES","url":"https://www.universidadcies.mx/blog/",
     "description":"Artículos sobre carreras, campo laboral e industria en Tijuana y la frontera México-Estados Unidos.",
     "publisher":{"@type":"Organization","name":"Universidad CIES","url":"https://www.universidadcies.mx"}
   };
