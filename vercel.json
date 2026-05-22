@@ -1,7 +1,6 @@
 {
     "cleanUrls": true,
-  "trailingSlash": true,
-    "trailingSlash": false,
+    "trailingSlash": true,
     "redirects": [
           { "source": "/licenciaturas", "destination": "/licenciaturas-tijuana-baja-california", "permanent": true },
           { "source": "/ingenierias", "destination": "/ingenierias-tijuana-baja-california", "permanent": true },
