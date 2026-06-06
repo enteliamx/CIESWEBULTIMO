@@ -1,4 +1,4 @@
-// Universidad CIES — Blog Post Component
+——←ííáó››⏱🎓←¿íó💬// Universidad CIES — Blog Post Component
 const WA_BLOG = 'https://wa.me/526644901395';
 
 const BlogPostPage = ({ onNavigate }) => {
