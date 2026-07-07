@@ -47,7 +47,7 @@ const PostgradoPage = ({ data, onNavigate }) => {
 
   return (
     <div>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({"@context":"https://schema.org","@type":"Course","name":data.title+" — Universidad CIES Tijuana","description":data.subtitle||"","provider":{"@type":"EducationalOrganization","@id":"https://www.universidadcies.mx/#organization","name":"Universidad CIES","address":{"@type":"PostalAddress","addressLocality":"Tijuana","addressRegion":"BC","addressCountry":"MX"}},"educationalCredentialAwarded":"Maestía Ejecutiva","inLanguage":"es-MX"})}} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({"@context":"https://schema.org","@type":"Course","name":data.title+" — Universidad CIES Tijuana","description":data.subtitle||"","provider":{"@type":"EducationalOrganization","@id":"https://www.universidadcies.mx/#organization","name":"Universidad CIES","address":{"@type":"PostalAddress","addressLocality":"Tijuana","addressRegion":"Baja California","addressCountry":"MX"}},"educationalCredentialAwarded":"Maestría Ejecutiva","inLanguage":"es-MX"})}} />
       <div style={pgS.header}>
         <div style={pgS.inner}>
           <div style={pgS.breadcrumb}>
