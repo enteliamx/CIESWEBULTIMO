@@ -1,12 +1,38 @@
-// Nav v2 - blog mobile fix
+// Nav v3 - canonical URLs (SEO: elimina enlaces internos que redirigen)
 // Universidad CIES — Navbar con dropdowns (fixed)
+
+// ── URLs canónicas (fuente única de verdad para TODOS los enlaces internos) ──
+// Rutas absolutas con www implícito + trailing slash, sin index.html ni slugs cortos.
+// Se sobrescribe window.CIES_NAV para que Footer y el routing de cada página
+// usen estas mismas URLs limpias y no generen 301 (index.html / /nosotros/ etc.).
+const CIES_NAV_CANON = {
+  home: '/',
+  nosotros: '/universidad-cies-tijuana/',
+  licenciaturas: '/licenciaturas-tijuana-baja-california/',
+  'lic-derecho': '/licenciatura-en-derecho-tijuana/',
+  'lic-comercio': '/licenciatura-comercio-exterior-aduanas-tijuana/',
+  'lic-administracion': '/licenciatura-administracion-empresas-tijuana/',
+  'lic-educacion': '/licenciatura-ciencias-educacion-tijuana/',
+  ingenierias: '/ingenierias-tijuana-baja-california/',
+  'ing-robotica': '/ingenieria-robotica-ia-tijuana/',
+  'ing-ia': '/ingenieria-inteligencia-artificial-tijuana/',
+  'ing-mecatronica': '/ingenieria-mecatronica-tijuana/',
+  'ing-industrial': '/ingenieria-industrial-tijuana/',
+  maestrias: '/maestrias-ejecutivas-tijuana/',
+  mba: '/mba-ejecutivo-tijuana/',
+  mie: '/maestria-innovacion-educativa-tijuana/',
+  preparatoria: '/preparatoria-tijuana-certificado-sep/',
+  admisiones: '/admisiones-universidad-tijuana/',
+  blog: '/blog/'
+};
+if (typeof window !== 'undefined') window.CIES_NAV = CIES_NAV_CANON;
 
 // Dropdown item with hover highlight
 const DropItem = ({ item, active, onNav }) => {
   const [hover, setHover] = React.useState(false);
   return (
     <a
-      href={'/' + item.page}
+      href={CIES_NAV_CANON[item.page] || '/'}
       style={{
         ...navS.dropItem,
         ...(hover ? navS.dropItemHover : {}),
@@ -39,25 +65,7 @@ const Nav = ({ currentPage, onNavigate }) => {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const NAV_URLS = window.CIES_NAV || {
-  home: '/', nosotros: '/universidad-cies-tijuana/',
-  licenciaturas: '/licenciaturas-tijuana-baja-california/',
-  'lic-derecho': '/licenciatura-en-derecho-tijuana/',
-  'lic-comercio': '/licenciatura-comercio-exterior-aduanas-tijuana/',
-  'lic-administracion': '/licenciatura-administracion-empresas-tijuana/',
-  'lic-educacion': '/licenciatura-ciencias-educacion-tijuana/',
-  ingenierias: '/ingenierias-tijuana-baja-california/',
-  'ing-robotica': '/ingenieria-robotica-ia-tijuana/',
-  'ing-ia': '/ingenieria-inteligencia-artificial-tijuana/',
-  'ing-mecatronica': '/ingenieria-mecatronica-tijuana/',
-  'ing-industrial': '/ingenieria-industrial-tijuana/',
-  maestrias: '/maestrias-ejecutivas-tijuana/',
-  mba: '/mba-ejecutivo-tijuana/',
-  mie: '/maestria-innovacion-educativa-tijuana/',
-  preparatoria: '/preparatoria-tijuana-certificado-sep/',
-  admisiones: '/admisiones-universidad-tijuana/',
-  blog: '/blog/'
-};
+  const NAV_URLS = CIES_NAV_CANON;
 const navGroups = [
     { id: 'nosotros', label: 'Nosotros', page: 'nosotros' },
     {
@@ -141,19 +149,16 @@ const navGroups = [
               >
                 {group.label}
                 {group.children && (
-                  <svg style={{ ...navS.chevron, transform: dropdown === group.id ? 'rotate(180deg)' : 'none', transition: 'transform 0.15s' }} viewBox="0 0 10 6" fill="none" width="10" height="6">
-                    <path d="M1 1l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
+                  <svg style={{ ...navS.chevron, transform: dropdown === group.id ? 'rotate(180deg)' : 'none', transition: 'transform 0.15s' }} viewBox="0 0 10 6" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M1 1l4 4 4-4"/></svg>
                 )}
               </button>
-
               {group.children && dropdown === group.id && (
                 <div style={navS.dropdown}
                   onMouseEnter={() => openDropdown(group.id)}
-                  onMouseLeave={() => scheduleClose()}
+                  onMouseLeave={scheduleClose}
                 >
-                  {group.children.map(c => (
-                    <DropItem key={c.page} item={c} active={currentPage === c.page} onNav={handleNav} />
+                  {group.children.map(child => (
+                    <DropItem key={child.page} item={child} active={currentPage === child.page} onNav={handleNav} />
                   ))}
                 </div>
               )}
@@ -163,24 +168,21 @@ const navGroups = [
 
         <button style={navS.cta} className="nav-cta-desktop" onClick={() => handleNav('admisiones')}>Inscríbete</button>
 
-        {/* Burger */}
-        <button style={navS.burger} className="nav-burger" onClick={() => setMenuOpen(!menuOpen)}>
-          <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-            {menuOpen
-              ? <><line x1="4" y1="4" x2="18" y2="18" stroke="#1A1A1A" strokeWidth="2" strokeLinecap="round"/><line x1="18" y1="4" x2="4" y2="18" stroke="#1A1A1A" strokeWidth="2" strokeLinecap="round"/></>
-              : <><line x1="3" y1="6" x2="19" y2="6" stroke="#1A1A1A" strokeWidth="2" strokeLinecap="round"/><line x1="3" y1="11" x2="19" y2="11" stroke="#1A1A1A" strokeWidth="2" strokeLinecap="round"/><line x1="3" y1="16" x2="19" y2="16" stroke="#1A1A1A" strokeWidth="2" strokeLinecap="round"/></>
-            }
+        {/* Mobile burger */}
+        <button style={navS.burger} className="nav-burger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Menú">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" strokeWidth="2" strokeLinecap="round">
+            {menuOpen ? <path d="M18 6L6 18M6 6l12 12"/> : <path d="M3 12h18M3 6h18M3 18h18"/>}
           </svg>
         </button>
       </div>
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div style={navS.mobile}>
+        <div style={navS.mobile} className="nav-mobile-menu">
           {navGroups.map(group => (
             <div key={group.id}>
               {group.page ? (
-                <a href={group.page === 'blog' ? '/blog/' : group.page === 'home' ? '/' : ('/' + group.page + '/')} onClick={() => { setMenuOpen(false); }} style={{...navS.mobileLink, textDecoration:'none', display:'block'}}>{group.label}</a>
+                <a href={NAV_URLS[group.page] || '/'} onClick={() => { setMenuOpen(false); }} style={{...navS.mobileLink, textDecoration:'none', display:'block'}}>{group.label}</a>
               ) : (
                 <>
                   <div style={navS.mobileGroup}>{group.label}</div>
