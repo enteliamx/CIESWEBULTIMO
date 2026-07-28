@@ -16,6 +16,7 @@ const SiteFooter = ({ onNavigate }) => {
   ];
   const institucion = [
     { label: 'Nosotros', page: 'nosotros' },
+    { label: 'Campus Mexicali', page: 'campus-mexicali' },
     { label: 'Preparatoria', page: 'preparatoria' },
     { label: 'Admisiones', page: 'admisiones' },
     { label: 'MBA', page: 'mba' },
