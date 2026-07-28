@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link rel="preload" href="../../fonts/Figtree-Bold.ttf" as="font" type="font/truetype" crossorigin="anonymous">
+<link rel="icon" type="image/png" href="../../assets/LOGO_UNI_CIES_1.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maestrías en Campus Mexicali — Muy pronto | Universidad CIES</title>
+<meta name="description" content="Muy pronto: maestrías en modalidad ejecutiva con RVOE SEP en el Campus Mexicali de Universidad CIES.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://www.universidadcies.mx/campus-mexicali/maestrias/">
+<meta property="og:title" content="Maestrías en Campus Mexicali — Muy pronto | Universidad CIES">
+<meta property="og:description" content="Muy pronto: maestrías en modalidad ejecutiva con RVOE SEP en el Campus Mexicali de Universidad CIES.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_MX">
+<style>
+@font-face { font-family:'Varsity Impact'; src:url('../../fonts/Varsity-Impact-Bold.otf') format('opentype'); font-weight:700; }
+@font-face { font-family:'Varsity Impact'; src:url('../../fonts/Varsity-Impact-Extrabold.otf') format('opentype'); font-weight:800; }
+@font-face { font-family:'Varsity Impact'; src:url('../../fonts/Varsity-Impact-Regular.otf') format('opentype'); font-weight:400; }
+@font-face { font-family:'Figtree'; src:url('../../fonts/Figtree-Regular.ttf') format('truetype'); font-weight:400; }
+@font-face { font-family:'Figtree'; src:url('../../fonts/Figtree-Medium.ttf') format('truetype'); font-weight:500; }
+@font-face { font-family:'Figtree'; src:url('../../fonts/Figtree-SemiBold.ttf') format('truetype'); font-weight:600; }
+@font-face { font-family:'Figtree'; src:url('../../fonts/Figtree-Bold.ttf') format('truetype'); font-weight:700; }
+@font-face { font-family:'Figtree'; src:url('../../fonts/Figtree-ExtraBold.ttf') format('truetype'); font-weight:800; }
+
+*,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+html { scroll-behavior:smooth; }
+body { font-family:'Figtree',system-ui,sans-serif; background:#fff; color:#1A1A1A; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+#root { overflow-x: hidden; }
+
+/* Beca banner slide-up animation */
+@keyframes slideUp { from { opacity:0; transform:translateX(-50%) translateY(20px); } to { opacity:1; transform:translateX(-50%) translateY(0); } }
+
+/* Hide stat dividers when bar wraps on mobile */
+@media (max-width: 680px) {
+  .stat-div { display: none !important; }
+  .stats-bar .stat-item { border-bottom: 1px solid #F0F0F0; padding: 18px 16px !important; }
+}
+
+/* ── Mobile program page fixes ─────── */
+@media (max-width: 680px) {
+  .pp-header-inner { padding: 0 16px !important; }
+  .pp-meta-row { gap: 6px 12px !important; }
+  .pp-meta-item { font-size: 12px !important; }
+  .pp-body { padding: 16px 0 48px !important; }
+  .pp-body-inner { padding: 0 12px !important; }
+  .pp-section { padding: 20px 16px !important; }
+  .pp-plan-grid { grid-template-columns: 1fr !important; }
+  .pp-egreso-grid, .pp-campo-grid, .pp-razones-grid, .pp-imp-grid { grid-template-columns: 1fr !important; }
+  .pp-cta-banner { flex-direction: column !important; text-align: center !important; }
+}
+
+/* ── Responsive nav ─── */
+@media (max-width: 900px) {
+  .nav-desktop { display:none !important; }
+  .nav-burger { display:flex !important; }
+  .nav-cta-desktop { display:none !important; }
+}
+
+/* ── Tablet (≤ 900px) ───────────────── */
+@media (max-width: 900px) {
+  .program-body-inner, .pg-body-inner { grid-template-columns: 1fr !important; }
+  .program-body-inner aside, .pg-body-inner aside { display: none; }
+  .niveles-grid { grid-template-columns: 1fr !important; }
+  .model-grid   { grid-template-columns: 1fr !important; }
+  .testim-grid  { grid-template-columns: 1fr !important; }
+  .map-grid     { grid-template-columns: 1fr !important; }
+  .map-grid > div:first-child { height: 260px !important; }
+  .footer-grid  { grid-template-columns: 1fr 1fr !important; gap: 32px !important; }
+  .step-grid    { grid-template-columns: 1fr 1fr !important; }
+  .form-grid    { grid-template-columns: 1fr !important; }
+}
+
+/* ── Mobile (≤ 680px) ───────────────── */
+@media (max-width: 680px) {
+  /* Hero */
+  .hero-inner { padding: 56px 20px 48px !important; }
+
+  /* Grids → stack */
+  .stats-bar    { flex-wrap: wrap !important; justify-content: center !important; }
+  .stats-bar > * { flex: 1 1 40% !important; min-width: 120px !important; }
+  .programs-grid  { grid-template-columns: 1fr !important; }
+  .niveles-grid   { grid-template-columns: 1fr !important; }
+  .model-grid     { grid-template-columns: 1fr !important; }
+  .pilares-grid   { grid-template-columns: 1fr !important; }
+  .testim-grid    { grid-template-columns: 1fr !important; }
+  .footer-grid    { grid-template-columns: 1fr !important; gap: 28px !important; }
+  .mvs-grid       { grid-template-columns: 1fr !important; }
+  .num-grid       { grid-template-columns: repeat(3,1fr) !important; }
+  .step-grid      { grid-template-columns: 1fr !important; }
+  .form-grid      { grid-template-columns: 1fr !important; }
+  .listing-grid   { grid-template-columns: 1fr !important; }
+  .maestrias-grid { grid-template-columns: 1fr !important; }
+  .prep-grid      { grid-template-columns: 1fr !important; }
+  .req-grid       { grid-template-columns: 1fr !important; }
+  .map-grid       { grid-template-columns: 1fr !important; }
+  .map-grid > div:first-child { height: 220px !important; }
+
+  /* Strip CTA */
+  .strip-inner { flex-direction: column !important; text-align: center !important; align-items: center !important; }
+
+  /* Section padding */
+  section { padding-left: 0 !important; padding-right: 0 !important; }
+}
+
+/* ── Small mobile (≤ 420px) ─────────── */
+@media (max-width: 420px) {
+  .num-grid { grid-template-columns: repeat(2,1fr) !important; }
+  .stats-bar > * { flex: 1 1 45% !important; padding: 16px 12px !important; }
+}
+
+/* Force inner containers to respect viewport */
+.page-enter > * { max-width: 100vw; overflow-x: hidden; }
+img { max-width: 100%; height: auto; }
+
+/* ── Page entrance animations ───────── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(0.97); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.anim-hero-title {
+  animation: fadeInUp 0.7s cubic-bezier(0.22,1,0.36,1) both;
+}
+.anim-hero-sub {
+  animation: fadeInUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.15s both;
+}
+.anim-hero-actions {
+  animation: fadeInUp 0.6s cubic-bezier(0.22,1,0.36,1) 0.28s both;
+}
+.anim-hero-badge {
+  animation: fadeInLeft 0.5s cubic-bezier(0.22,1,0.36,1) both;
+}
+.anim-section-title {
+  animation: fadeInUp 0.65s cubic-bezier(0.22,1,0.36,1) both;
+}
+.anim-page-title {
+  animation: fadeInUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.1s both;
+}
+.anim-page-sub {
+  animation: fadeInUp 0.6s cubic-bezier(0.22,1,0.36,1) 0.22s both;
+}
+.anim-fade {
+  animation: fadeInScale 0.6s cubic-bezier(0.22,1,0.36,1) both;
+}
+
+/* Smooth page transitions */
+.page-enter { animation: fadeIn 0.25s ease; }
+@keyframes fadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+
+/* Scrollbar */
+::-webkit-scrollbar { width:6px; }
+::-webkit-scrollbar-track { background:#F5F5F5; }
+::-webkit-scrollbar-thumb { background:#C8C8C8; border-radius:3px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+window.CIES_BASE = '../..';
+window.CIES_NAV = {
+  "home": "../../index.html",
+  "nosotros": "../../universidad-cies-tijuana/index.html",
+  "licenciaturas": "../../licenciaturas-tijuana-baja-california/index.html",
+  "lic-derecho": "../../licenciatura-en-derecho-tijuana/index.html",
+  "lic-comercio": "../../licenciatura-comercio-exterior-aduanas-tijuana/index.html",
+  "lic-administracion": "../../licenciatura-administracion-empresas-tijuana/index.html",
+  "lic-educacion": "../../licenciatura-ciencias-educacion-tijuana/index.html",
+  "ingenierias": "../../ingenierias-tijuana-baja-california/index.html",
+  "ing-robotica": "../../ingenieria-robotica-ia-tijuana/index.html",
+  "ing-ia": "../../ingenieria-inteligencia-artificial-tijuana/index.html",
+  "ing-mecatronica": "../../ingenieria-mecatronica-tijuana/index.html",
+  "ing-industrial": "../../ingenieria-industrial-tijuana/index.html",
+  "maestrias": "../../maestrias-ejecutivas-tijuana/index.html",
+  "mba": "../../mba-ejecutivo-tijuana/index.html",
+  "mie": "../../maestria-innovacion-educativa-tijuana/index.html",
+  "preparatoria": "../../preparatoria-tijuana-certificado-sep/index.html",
+  "admisiones": "../../admisiones-universidad-tijuana/index.html",
+  "campus-mexicali": "../../campus-mexicali/index.html",
+  "cm-ingenierias": "../../campus-mexicali/ingenierias/index.html",
+  "cm-licenciaturas": "../../campus-mexicali/licenciaturas/index.html",
+  "cm-maestrias": "../../campus-mexicali/maestrias/index.html",
+  "cm-preparatoria": "../../campus-mexicali/preparatoria/index.html"
+};
+</script>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="../../components/Nav.jsx"></script>
+<script type="text/babel" src="../../components/SiteFooter.jsx"></script>
+<script type="text/babel" src="../../components/Shared.jsx"></script>
+<script type="text/babel" src="../../pages/CampusMexicali.jsx"></script>
+<script type="text/babel">
+const navigate = (key) => {
+  const h = window.CIES_NAV[key];
+  if (h) window.location.href = h;
+};
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <div>
+    <Nav currentPage="campus-mexicali" onNavigate={navigate} />
+    <CampusEnConstruccion nivel="Maestrías" descripcion="Estamos preparando nuestra oferta de posgrados para el Campus Mexicali. Déjanos tus datos y serás de los primeros en recibir informes." />
+    <SiteFooter onNavigate={navigate} />
+    <WhatsAppFAB />
+    <BecaBanner />
+  </div>
+);
+</script>
+</body>
+</html>
