@@ -23,6 +23,11 @@ const CIES_NAV_CANON = {
   mie: '/maestria-innovacion-educativa-tijuana/',
   preparatoria: '/preparatoria-tijuana-certificado-sep/',
   admisiones: '/admisiones-universidad-tijuana/',
+  'campus-mexicali': '/campus-mexicali/',
+  'cm-licenciaturas': '/campus-mexicali/licenciaturas/',
+  'cm-ingenierias': '/campus-mexicali/ingenierias/',
+  'cm-maestrias': '/campus-mexicali/maestrias/',
+  'cm-preparatoria': '/campus-mexicali/preparatoria/',
   blog: '/blog/'
 };
 if (typeof window !== 'undefined') window.CIES_NAV = CIES_NAV_CANON;
@@ -68,6 +73,7 @@ const Nav = ({ currentPage, onNavigate }) => {
   const NAV_URLS = CIES_NAV_CANON;
 const navGroups = [
     { id: 'nosotros', label: 'Nosotros', page: 'nosotros' },
+    { id: 'campus-mexicali', label: 'Campus Mexicali', page: 'campus-mexicali' },
     {
       id: 'licenciaturas', label: 'Licenciaturas',
       children: [
