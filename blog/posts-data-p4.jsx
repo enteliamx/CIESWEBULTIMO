@@ -656,6 +656,15 @@ readTime: '5 min',
 content: `
 <h2>COBACH vs CONALEP vs SEP: diferencias entre sistemas de preparatoria en Tijuana</h2>
 <p>Elegir preparatoria en Tijuana no debe hacerse solo por cercanía o porque un amigo se inscribió ahí. Hay distintos sistemas y cada uno tiene enfoques diferentes. Para padres de familia y estudiantes, lo importante es entender qué tipo de formación busca el alumno: preparación general para universidad, ruta más técnica, u opción dentro de una institución privada con validez oficial.</p>
+<p><strong>Respuesta rápida:</strong> los tres sistemas otorgan bachillerato con validez oficial; la diferencia está en el enfoque. Esta tabla resume lo esencial:</p>
+<div style="overflow-x:auto;margin:1rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr style="background:#325691;color:#fff;"><th style="text-align:left;padding:10px;border:1px solid #dcdcdc;">Sistema</th><th style="text-align:left;padding:10px;border:1px solid #dcdcdc;">Enfoque</th><th style="text-align:left;padding:10px;border:1px solid #dcdcdc;">Ideal para</th><th style="text-align:left;padding:10px;border:1px solid #dcdcdc;">Validez</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px;border:1px solid #dcdcdc;"><strong>COBACH</strong></td><td style="padding:10px;border:1px solid #dcdcdc;">Bachillerato general</td><td style="padding:10px;border:1px solid #dcdcdc;">Base amplia para seguir a la universidad</td><td style="padding:10px;border:1px solid #dcdcdc;">Oficial (DGB)</td></tr>
+<tr style="background:#f7f7f7;"><td style="padding:10px;border:1px solid #dcdcdc;"><strong>CONALEP</strong></td><td style="padding:10px;border:1px solid #dcdcdc;">Bachillerato + carrera técnica</td><td style="padding:10px;border:1px solid #dcdcdc;">Incorporarse antes al mundo laboral</td><td style="padding:10px;border:1px solid #dcdcdc;">Oficial (SEP)</td></tr>
+<tr><td style="padding:10px;border:1px solid #dcdcdc;"><strong>Prepa SEP / particular</strong></td><td style="padding:10px;border:1px solid #dcdcdc;">Bachillerato general con RVOE</td><td style="padding:10px;border:1px solid #dcdcdc;">Acompañamiento en institución privada</td><td style="padding:10px;border:1px solid #dcdcdc;">RVOE SEP</td></tr>
+</tbody></table></div>
 <h2>Qué es COBACH</h2>
 <p>COBACH es un bachillerato general. Su objetivo principal es preparar al estudiante para continuar estudios superiores. Incluye materias de distintas áreas: matemáticas, ciencias, comunicación, humanidades y ciencias sociales. Para un joven que quiere estudiar una licenciatura o ingeniería después, el bachillerato general puede ser una buena base para explorar varias áreas antes de elegir carrera.</p>
 <h2>Qué es CONALEP</h2>
@@ -663,9 +672,14 @@ content: `
 <h2>Qué significa preparatoria con validez SEP</h2>
 <p>Cuando una preparatoria cuenta con reconocimiento oficial, sus estudios tienen validez ante la autoridad educativa. Para padres de familia, este punto es básico: antes de inscribir a un hijo, deben confirmar que el programa tenga validez oficial vigente. En instituciones particulares aplica el RVOE correspondiente.</p>
 <h2>Preparatoria COBACH en CIES: qué la diferencia</h2>
-<p>La Preparatoria de CIES imparte el Bachillerato General COBACH con grupos más pequeños y atención personalizada, ambiente universitario desde la prepa (los estudiantes conviven con alumnos de licenciatura e ingeniería), e instalaciones en Blvd. Federico Benítez 5, Tijuana, con acceso a infraestructura universitaria.</p>
+<p>La <a href="/preparatoria-tijuana-certificado-sep/">Preparatoria de CIES</a> imparte el Bachillerato General COBACH con grupos más pequeños y atención personalizada, ambiente universitario desde la prepa (los estudiantes conviven con alumnos de licenciatura e ingeniería), e instalaciones en Blvd. Federico Benítez 5, Tijuana, con acceso a infraestructura universitaria.</p>
 <h2>Cómo elegir</h2>
-<p>Si el objetivo es la universidad, cualquier bachillerato general (COBACH, DGB) funciona. La diferencia está en el entorno, tamaño del grupo y preparación adicional que recibe el estudiante. Para conocer el proceso de inscripción, escríbenos al WhatsApp (664) 490-1395.</p>
+<p>Si el objetivo es la universidad, cualquier bachillerato general (COBACH, DGB) funciona. La diferencia está en el entorno, tamaño del grupo y preparación adicional que recibe el estudiante. Para conocer el <a href="/admisiones-universidad-tijuana/">proceso de inscripción</a>, escríbenos al WhatsApp (664) 490-1395.</p>
+<div style="margin:2rem 0;padding:20px 24px;background:#f7f7f7;border-left:4px solid #b64d41;border-radius:8px;">
+<div style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.05em;color:#b64d41;font-weight:700;margin-bottom:6px;">Carrera relacionada</div>
+<a href="/preparatoria-tijuana-certificado-sep/" style="font-family:'Varsity Impact',sans-serif;font-size:1.15rem;color:#325691;text-decoration:none;font-weight:700;">Preparatoria COBACH en CIES &rarr;</a>
+<p style="margin:6px 0 0;color:#555;font-size:0.95rem;">Bachillerato General con validez oficial, grupos pequeños y ambiente universitario en Tijuana.</p>
+</div>
 <h2>Fuentes</h2>
 <ul>
 <li><a href="https://www.cobachbc.edu.mx/" target="_blank" rel="noopener">COBACH Baja California</a></li>
