@@ -7,7 +7,7 @@ const BlogPostPage = ({ onNavigate }) => {
 
   React.useEffect(() => {
     if (post) {
-      document.title = post.title + ' — Blog Universidad CIES';
+      document.title = post.title;
       let desc = document.querySelector('meta[name="description"]');
       if (!desc) { desc = document.createElement('meta'); desc.name = 'description'; document.head.appendChild(desc); }
       desc.content = post.description;
