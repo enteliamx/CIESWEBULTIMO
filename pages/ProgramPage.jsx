@@ -3,16 +3,21 @@
 const WA_NUM = '526644901395';
 
 const ProgramPage = ({ program, onNavigate }) => {
-  const waMsg = encodeURIComponent(`Hola, me interesa el programa de ${program.title} en Universidad CIES. ¿Me pueden dar más información?`);
-  const waUrl = `https://wa.me/${WA_NUM}?text=${waMsg}`;
+  const campus = program.campus || { locality:'Tijuana', region:'Baja California', nameSuffix:'Tijuana', phone:'(664) 490-1395', address:'Blvd. Federico Benítez 5, Tijuana B.C.', waNum:'526644901395', waLabel:'' };
+  const waNum = campus.waNum || '526644901395';
+  const waMsg = encodeURIComponent(program.waText || `Hola, me interesa el programa de ${program.title} en Universidad CIES${campus.waLabel || ''}. ¿Me pueden dar más información?`);
+  const waUrl = `https://wa.me/${waNum}?text=${waMsg}`;
+  const schemaAddress = { "@type":"PostalAddress", "addressLocality":campus.locality, "addressRegion":campus.region, "addressCountry":"MX" };
+  if (campus.streetAddress) schemaAddress.streetAddress = campus.streetAddress;
+  if (campus.postalCode) schemaAddress.postalCode = campus.postalCode;
 
   return (
     <div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
         "@context":"https://schema.org","@type":"Course",
-        "name": program.title + " — Universidad CIES Tijuana",
+        "name": program.title + " — Universidad CIES " + campus.nameSuffix,
         "description": program.subtitle,
-        "provider":{"@type":"EducationalOrganization","@id":"https://www.universidadcies.mx/#organization","name":"Universidad CIES","address":{"@type":"PostalAddress","addressLocality":"Tijuana","addressRegion":"Baja California","addressCountry":"MX"}},
+        "provider":{"@type":"EducationalOrganization","@id":"https://www.universidadcies.mx/#organization","name":"Universidad CIES","address":schemaAddress},
         "courseCode": program.clave,
         "educationalCredentialAwarded": program.categoryLabel,
         "inLanguage":"es-MX"
@@ -192,8 +197,8 @@ const ProgramPage = ({ program, onNavigate }) => {
                 ))}
               </div>
               <div style={ppS.sideContact}>
-                <div style={ppS.sideContactItem}>(664) 490-1395</div>
-                <div style={ppS.sideContactItem}>Blvd. Federico Benítez 5, Tijuana B.C.</div>
+                <div style={ppS.sideContactItem}>{campus.phone}</div>
+                <div style={ppS.sideContactItem}>{campus.address}</div>
               </div>
             </div>
           </aside>
