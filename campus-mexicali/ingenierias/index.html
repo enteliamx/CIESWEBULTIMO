@@ -217,6 +217,7 @@ const S = {
   body: { background:'#F5F5F5', padding:'44px 0 72px' },
   bodyInner: { maxWidth:1100, margin:'0 auto', padding:'0 24px' },
   grid: { display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(260px,1fr))', gap:18, marginBottom:36 },
+  single: { maxWidth:460, margin:'0 auto 36px' },
   cardOn: { display:'block', background:'#fff', borderRadius:10, padding:'26px 22px', boxShadow:'0 4px 20px rgba(15,30,74,0.10)', border:'1px solid #E3E8F5', textDecoration:'none', transition:'transform 0.2s, box-shadow 0.2s' },
   rvoe: { display:'inline-block', fontFamily:"'Figtree',sans-serif", fontSize:11, fontWeight:800, color:'#C23535', letterSpacing:'0.03em', marginBottom:10 },
   cardTitle: { fontFamily:"'Varsity Impact',serif", fontSize:21, fontWeight:800, color:'#0F1E4A', textTransform:'uppercase', lineHeight:1.1, marginBottom:8 },
@@ -249,20 +250,13 @@ const Ingenierias = () => (
     </section>
     <section style={S.body}>
       <div style={S.bodyInner}>
-        <div style={S.grid} className="listing-grid">
+        <div style={S.single}>
           <a href={IA_URL} style={S.cardOn}>
             <div style={S.rvoe}>RVOE-BC-L025-M1/26</div>
             <div style={S.cardTitle}>Ingeniería en Inteligencia Artificial</div>
             <div style={S.cardDesc}>Machine learning, visión artificial, redes neuronales, robótica e IoT. 9 cuatrimestres, modalidad presencial en Mexicali.</div>
             <div style={S.cardCta}>Ver plan de estudios →</div>
           </a>
-          {['Ingeniería en Robótica','Ingeniería en Mecatrónica','Ingeniería Industrial'].map((t,i)=>(
-            <div key={i} style={S.cardOff}>
-              <div style={S.soon}>Próximamente</div>
-              <div style={S.cardTitleOff}>{t}</div>
-              <div style={S.cardDescOff}>Muy pronto en el Campus Mexicali.</div>
-            </div>
-          ))}
         </div>
         <div style={S.nap}>
           <div style={S.napTitle}>Campus Mexicali</div>
