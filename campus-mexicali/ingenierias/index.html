@@ -5,12 +5,12 @@
 <link rel="preload" href="../../fonts/Figtree-Bold.ttf" as="font" type="font/truetype" crossorigin="anonymous">
 <link rel="icon" type="image/png" href="../../assets/LOGO_UNI_CIES_1.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ingenierías en Campus Mexicali — Muy pronto | Universidad CIES</title>
-<meta name="description" content="Muy pronto: ingenierías con RVOE SEP en el Campus Mexicali de Universidad CIES. Abrimos con Ingeniería en Inteligencia Artificial.">
-<meta name="robots" content="noindex, follow">
+<title>Ingenierías en Mexicali con RVOE | Universidad CIES</title>
+<meta name="description" content="Ingenierías con RVOE SEP en el Campus Mexicali de Universidad CIES. Inicia la Ingeniería en Inteligencia Artificial; más ingenierías muy pronto. Informes por WhatsApp.">
+<meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.universidadcies.mx/campus-mexicali/ingenierias/">
-<meta property="og:title" content="Ingenierías en Campus Mexicali — Muy pronto | Universidad CIES">
-<meta property="og:description" content="Muy pronto: ingenierías con RVOE SEP en el Campus Mexicali de Universidad CIES. Abrimos con Ingeniería en Inteligencia Artificial.">
+<meta property="og:title" content="Ingenierías en Mexicali con RVOE | Universidad CIES">
+<meta property="og:description" content="Ingenierías con RVOE en el Campus Mexicali de Universidad CIES. Inicia la Ingeniería en Inteligencia Artificial.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_MX">
 <style>
@@ -186,6 +186,7 @@ window.CIES_NAV = {
   "admisiones": "../../admisiones-universidad-tijuana/index.html",
   "campus-mexicali": "../../campus-mexicali/index.html",
   "cm-ingenierias": "../../campus-mexicali/ingenierias/index.html",
+  "cm-ing-ia": "../../campus-mexicali/ingenierias/inteligencia-artificial/index.html",
   "cm-licenciaturas": "../../campus-mexicali/licenciaturas/index.html",
   "cm-maestrias": "../../campus-mexicali/maestrias/index.html",
   "cm-preparatoria": "../../campus-mexicali/preparatoria/index.html"
@@ -199,16 +200,84 @@ window.CIES_NAV = {
 <script type="text/babel" src="../../components/Nav.jsx"></script>
 <script type="text/babel" src="../../components/SiteFooter.jsx"></script>
 <script type="text/babel" src="../../components/Shared.jsx"></script>
-<script type="text/babel" src="../../pages/CampusMexicali.jsx"></script>
 <script type="text/babel">
-const navigate = (key) => {
-  const h = window.CIES_NAV[key];
-  if (h) window.location.href = h;
+const navigate = (key) => { const h = window.CIES_NAV[key]; if (h) window.location.href = h; };
+const IA_URL = '/campus-mexicali/ingenierias/inteligencia-artificial/';
+const WA = 'https://wa.me/526644901395?text=' + encodeURIComponent('Hola, me interesa la Ingeniería en IA de Mexicali. ¿Me pueden dar más información?');
+const S = {
+  hero: { background:'#0F1E4A', padding:'56px 0 44px' },
+  heroInner: { maxWidth:1100, margin:'0 auto', padding:'0 24px' },
+  crumb: { display:'flex', gap:6, alignItems:'center', marginBottom:18, flexWrap:'wrap' },
+  crumbLink: { background:'none', border:'none', color:'rgba(255,255,255,0.55)', fontFamily:"'Figtree',sans-serif", fontSize:13, cursor:'pointer', padding:0 },
+  crumbSep: { color:'rgba(255,255,255,0.3)', fontSize:13 },
+  crumbCur: { color:'rgba(255,255,255,0.85)', fontFamily:"'Figtree',sans-serif", fontSize:13 },
+  eyebrow: { fontFamily:"'Figtree',sans-serif", fontSize:11, fontWeight:700, letterSpacing:'0.1em', textTransform:'uppercase', color:'rgba(255,255,255,0.6)', marginBottom:8 },
+  h1: { fontFamily:"'Varsity Impact',serif", fontSize:'clamp(30px,5vw,50px)', fontWeight:800, color:'#fff', textTransform:'uppercase', lineHeight:1.05, marginBottom:12 },
+  sub: { fontFamily:"'Figtree',sans-serif", fontSize:16, color:'rgba(255,255,255,0.7)', lineHeight:1.6, maxWidth:620 },
+  body: { background:'#F5F5F5', padding:'44px 0 72px' },
+  bodyInner: { maxWidth:1100, margin:'0 auto', padding:'0 24px' },
+  grid: { display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(260px,1fr))', gap:18, marginBottom:36 },
+  cardOn: { display:'block', background:'#fff', borderRadius:10, padding:'26px 22px', boxShadow:'0 4px 20px rgba(15,30,74,0.10)', border:'1px solid #E3E8F5', textDecoration:'none', transition:'transform 0.2s, box-shadow 0.2s' },
+  rvoe: { display:'inline-block', fontFamily:"'Figtree',sans-serif", fontSize:11, fontWeight:800, color:'#C23535', letterSpacing:'0.03em', marginBottom:10 },
+  cardTitle: { fontFamily:"'Varsity Impact',serif", fontSize:21, fontWeight:800, color:'#0F1E4A', textTransform:'uppercase', lineHeight:1.1, marginBottom:8 },
+  cardDesc: { fontFamily:"'Figtree',sans-serif", fontSize:13.5, color:'#5A5A5A', lineHeight:1.55, marginBottom:16 },
+  cardCta: { fontFamily:"'Figtree',sans-serif", fontSize:14, fontWeight:700, color:'#2B4DA8' },
+  cardOff: { background:'#F0F1F4', borderRadius:10, padding:'26px 22px', border:'1px dashed #C8CCD6' },
+  soon: { display:'inline-block', fontFamily:"'Figtree',sans-serif", fontSize:11, fontWeight:700, color:'#8A8A8A', letterSpacing:'0.06em', textTransform:'uppercase', marginBottom:10 },
+  cardTitleOff: { fontFamily:"'Varsity Impact',serif", fontSize:20, fontWeight:700, color:'#9AA0AD', textTransform:'uppercase', lineHeight:1.1, marginBottom:8 },
+  cardDescOff: { fontFamily:"'Figtree',sans-serif", fontSize:13, color:'#9AA0AD', lineHeight:1.5 },
+  nap: { background:'#fff', borderRadius:10, padding:'28px 24px', boxShadow:'0 2px 12px rgba(0,0,0,0.06)', textAlign:'center' },
+  napTitle: { fontFamily:"'Varsity Impact',serif", fontSize:18, fontWeight:800, color:'#0F1E4A', textTransform:'uppercase', marginBottom:10 },
+  napItem: { fontFamily:"'Figtree',sans-serif", fontSize:14, color:'#5A5A5A', marginBottom:4 },
+  waBtn: { display:'inline-flex', alignItems:'center', gap:8, background:'#25D366', color:'#fff', fontFamily:"'Figtree',sans-serif", fontWeight:600, fontSize:15, padding:'13px 26px', borderRadius:4, textDecoration:'none', marginTop:16 },
 };
+const Ingenierias = () => (
+  <div className="page-enter">
+    <section style={S.hero}>
+      <div style={S.heroInner}>
+        <div style={S.crumb}>
+          <button style={S.crumbLink} onClick={() => navigate('home')}>Inicio</button>
+          <span style={S.crumbSep}>›</span>
+          <button style={S.crumbLink} onClick={() => navigate('campus-mexicali')}>Campus Mexicali</button>
+          <span style={S.crumbSep}>›</span>
+          <span style={S.crumbCur}>Ingenierías</span>
+        </div>
+        <div style={S.eyebrow}>Campus Mexicali</div>
+        <h1 style={S.h1}>Ingenierías en Mexicali</h1>
+        <p style={S.sub}>Ingenierías con RVOE oficial en el Campus Mexicali de Universidad CIES. Iniciamos con la Ingeniería en Inteligencia Artificial y ampliaremos nuestra oferta muy pronto.</p>
+      </div>
+    </section>
+    <section style={S.body}>
+      <div style={S.bodyInner}>
+        <div style={S.grid} className="listing-grid">
+          <a href={IA_URL} style={S.cardOn}>
+            <div style={S.rvoe}>RVOE-BC-L025-M1/26</div>
+            <div style={S.cardTitle}>Ingeniería en Inteligencia Artificial</div>
+            <div style={S.cardDesc}>Machine learning, visión artificial, redes neuronales, robótica e IoT. 9 cuatrimestres, modalidad presencial en Mexicali.</div>
+            <div style={S.cardCta}>Ver plan de estudios →</div>
+          </a>
+          {['Ingeniería en Robótica','Ingeniería en Mecatrónica','Ingeniería Industrial'].map((t,i)=>(
+            <div key={i} style={S.cardOff}>
+              <div style={S.soon}>Próximamente</div>
+              <div style={S.cardTitleOff}>{t}</div>
+              <div style={S.cardDescOff}>Muy pronto en el Campus Mexicali.</div>
+            </div>
+          ))}
+        </div>
+        <div style={S.nap}>
+          <div style={S.napTitle}>Campus Mexicali</div>
+          <div style={S.napItem}>Calle Roberto Montenegro 26, C.P. 21379, Mexicali B.C.</div>
+          <div style={S.napItem}>(686) 844-7575</div>
+          <a href={WA} target="_blank" rel="noopener noreferrer" style={S.waBtn}>Solicitar información por WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </div>
+);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <div>
     <Nav currentPage="campus-mexicali" onNavigate={navigate} />
-    <CampusEnConstruccion nivel="Ingenierías" descripcion="Estamos preparando nuestra oferta de ingenierías para el Campus Mexicali, comenzando con Ingeniería en Inteligencia Artificial. Déjanos tus datos y serás de los primeros en recibir informes." />
+    <Ingenierias />
     <SiteFooter onNavigate={navigate} />
     <WhatsAppFAB />
     <BecaBanner />
