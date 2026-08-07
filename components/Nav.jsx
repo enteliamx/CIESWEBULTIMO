@@ -26,6 +26,7 @@ const CIES_NAV_CANON = {
   'campus-mexicali': '/campus-mexicali/',
   'cm-licenciaturas': '/campus-mexicali/licenciaturas/',
   'cm-ingenierias': '/campus-mexicali/ingenierias/',
+  'cm-ing-ia': '/campus-mexicali/ingenierias/inteligencia-artificial/',
   'cm-maestrias': '/campus-mexicali/maestrias/',
   'cm-preparatoria': '/campus-mexicali/preparatoria/',
   blog: '/blog/'
