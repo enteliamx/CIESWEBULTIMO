@@ -68,53 +68,46 @@ const wS = {
   tooltip: { position: 'absolute', right: '110%', whiteSpace: 'nowrap', background: '#1A1A1A', color: '#fff', fontFamily: "'Figtree',sans-serif", fontSize: 13, fontWeight: 500, padding: '6px 12px', borderRadius: 4, pointerEvents: 'none' },
 };
 
-// Sticky beca banner — appears after 5 seconds
+// Promo modal — image lightbox on site entry; tap image -> WhatsApp
 const BecaBanner = () => {
+  const [dismissed, setDismissed] = React.useState(() => sessionStorage.getItem('promo_agosto_dismissed') === '1');
   const [visible, setVisible] = React.useState(false);
-  const [dismissed, setDismissed] = React.useState(() => sessionStorage.getItem('beca_dismissed') === '1');
 
   React.useEffect(() => {
     if (dismissed) return;
-    const t = setTimeout(() => setVisible(true), 5000);
+    const t = setTimeout(() => setVisible(true), 400);
     return () => clearTimeout(t);
   }, [dismissed]);
 
-  const dismiss = () => {
+  const dismiss = (e) => {
+    if (e) e.stopPropagation();
     setVisible(false);
     setDismissed(true);
-    sessionStorage.setItem('beca_dismissed', '1');
+    sessionStorage.setItem('promo_agosto_dismissed', '1');
   };
 
   if (dismissed || !visible) return null;
 
-  const waUrl = 'https://wa.me/526644901395?text=' + encodeURIComponent('Hola, estoy interesado en aplicar para una beca en Universidad CIES.');
+  const waUrl = 'https://wa.me/526644901395?text=' + encodeURIComponent('¡Quiero mi beca de agosto!');
 
   return (
-    <div style={bbS.wrap}>
-      <div style={bbS.inner}>
-        <div style={bbS.icon}>🎓</div>
-        <div style={bbS.text}>
-          <div style={bbS.title}>¡Becas disponibles!</div>
-          <div style={bbS.sub}>Aplica ahora y reduce tu colegiatura.</div>
-        </div>
-        <a href={waUrl} target="_blank" rel="noopener noreferrer" style={bbS.btn} onClick={dismiss}>
-          ¡Quiero mi beca!
+    <div style={pmS.overlay} onClick={dismiss}>
+      <div style={pmS.box} onClick={(e) => e.stopPropagation()}>
+        <button style={pmS.close} onClick={dismiss} aria-label="Cerrar">✕</button>
+        <a href={waUrl} target="_blank" rel="noopener noreferrer" style={pmS.link} onClick={dismiss}>
+          <img src="/assets/cies_promociones_banner_web_1600.webp" alt="Beca de agosto — Universidad CIES" style={pmS.img} />
         </a>
-        <button style={bbS.close} onClick={dismiss} aria-label="Cerrar">✕</button>
       </div>
     </div>
   );
 };
 
-const bbS = {
-  wrap: { position:'fixed', bottom:96, left:'50%', transform:'translateX(-50%)', zIndex:490, animation:'slideUp 0.4s ease', maxWidth:480, width:'calc(100% - 32px)' },
-  inner: { background:'#0F1E4A', borderRadius:10, padding:'14px 16px', display:'flex', alignItems:'center', gap:12, boxShadow:'0 8px 32px rgba(0,0,0,0.35)', border:'2px solid rgba(43,77,168,0.4)' },
-  icon: { fontSize:24, flexShrink:0 },
-  text: { flex:1, minWidth:0 },
-  title: { fontFamily:"'Varsity Impact',serif", fontSize:18, fontWeight:800, color:'#fff', textTransform:'uppercase', lineHeight:1.1 },
-  sub: { fontFamily:"'Figtree',sans-serif", fontSize:12, color:'rgba(255,255,255,0.7)', marginTop:2 },
-  btn: { background:'#25D366', color:'#fff', fontFamily:"'Figtree',sans-serif", fontWeight:700, fontSize:13, padding:'10px 16px', borderRadius:6, textDecoration:'none', whiteSpace:'nowrap', flexShrink:0 },
-  close: { background:'none', border:'none', color:'rgba(255,255,255,0.5)', cursor:'pointer', fontSize:16, padding:'4px', flexShrink:0, lineHeight:1 },
+const pmS = {
+  overlay: { position:'fixed', inset:0, background:'rgba(0,0,0,0.72)', zIndex:1000, display:'flex', alignItems:'center', justifyContent:'center', padding:20, animation:'fadeIn 0.25s ease' },
+  box: { position:'relative', maxWidth:'min(640px, 92vw)', width:'100%' },
+  close: { position:'absolute', top:8, right:8, width:34, height:34, borderRadius:'50%', background:'#fff', border:'none', color:'#0F1E4A', fontSize:17, fontWeight:700, cursor:'pointer', boxShadow:'0 2px 10px rgba(0,0,0,0.35)', display:'flex', alignItems:'center', justifyContent:'center', zIndex:2, lineHeight:1 },
+  link: { display:'block', cursor:'pointer' },
+  img: { width:'100%', height:'auto', borderRadius:12, display:'block', boxShadow:'0 12px 48px rgba(0,0,0,0.5)' },
 };
 
 Object.assign(window, { PageHeader, WhatsAppFAB, BecaBanner });
