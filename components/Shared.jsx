@@ -79,7 +79,13 @@ const BecaBanner = () => {
     return () => { clearTimeout(t1); clearTimeout(t2); };
   }, []);
 
-  const waMsg = 'https://wa.me/526644901395?text=' + encodeURIComponent('¡Quiero mi beca de agosto!');
+  // Campus Mexicali: promo propia de preparatoria en landing y navegacion interna del campus
+  const esMexicali = typeof window !== 'undefined' && window.location.pathname.indexOf('/campus-mexicali') === 0;
+  const promo = esMexicali
+    ? { img: '/assets/promo_mexicali_prepa.webp', alt: 'Preparatoria CIES ahora en Mexicali — inscripción gratis y 30% de descuento', txt: '¡Quiero mi beca de prepa!', barTitle: '¡Becas de preparatoria!', barSub: 'Inscripción gratis y 30% en colegiatura.', barBtn: '¡Quiero mi beca de prepa!' }
+    : { img: '/assets/CIES_promocionNUEVA_web_1600.webp', alt: 'Promoción de inscripción — Universidad CIES', txt: '¡Quiero mi beca de agosto!', barTitle: '¡Becas disponibles!', barSub: 'Aplica ahora y reduce tu colegiatura.', barBtn: '¡Quiero mi beca!' };
+
+  const waMsg = 'https://wa.me/526644901395?text=' + encodeURIComponent(promo.txt);
 
   return (
     <React.Fragment>
@@ -88,7 +94,7 @@ const BecaBanner = () => {
           <div style={pmS.box} onClick={(e) => e.stopPropagation()}>
             <button style={pmS.close} onClick={() => setModalOpen(false)} aria-label="Cerrar">✕</button>
             <a href={waMsg} target="_blank" rel="noopener noreferrer" style={pmS.link} onClick={() => setModalOpen(false)}>
-              <img src="/assets/CIES_promocionNUEVA_web_1600.webp" alt="Promoción de inscripción — Universidad CIES" style={pmS.img} />
+              <img src={promo.img} alt={promo.alt} style={pmS.img} />
             </a>
           </div>
         </div>
@@ -98,11 +104,11 @@ const BecaBanner = () => {
           <div style={bbS.inner}>
             <div style={bbS.icon}>🎓</div>
             <div style={bbS.text}>
-              <div style={bbS.title}>¡Becas disponibles!</div>
-              <div style={bbS.sub}>Aplica ahora y reduce tu colegiatura.</div>
+              <div style={bbS.title}>{promo.barTitle}</div>
+              <div style={bbS.sub}>{promo.barSub}</div>
             </div>
             <a href={waMsg} target="_blank" rel="noopener noreferrer" style={bbS.btn} onClick={() => setBarOpen(false)}>
-              ¡Quiero mi beca!
+              {promo.barBtn}
             </a>
             <button style={bbS.close} onClick={() => setBarOpen(false)} aria-label="Cerrar">✕</button>
           </div>
