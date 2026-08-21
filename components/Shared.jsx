@@ -88,7 +88,7 @@ const BecaBanner = () => {
           <div style={pmS.box} onClick={(e) => e.stopPropagation()}>
             <button style={pmS.close} onClick={() => setModalOpen(false)} aria-label="Cerrar">✕</button>
             <a href={waMsg} target="_blank" rel="noopener noreferrer" style={pmS.link} onClick={() => setModalOpen(false)}>
-              <img src="/assets/cies_promociones_banner_web_1600.webp" alt="Beca de agosto — Universidad CIES" style={pmS.img} />
+              <img src="/assets/CIES_promocionNUEVA_web_1600.webp" alt="Promoción de inscripción — Universidad CIES" style={pmS.img} />
             </a>
           </div>
         </div>
