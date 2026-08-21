@@ -35,7 +35,7 @@ const BlogPostPage = ({ onNavigate }) => {
     "mainEntityOfPage": {"@type":"WebPage","@id":"https://www.universidadcies.mx/blog/"+post.slug+"/"},
     "url": "https://www.universidadcies.mx/blog/"+post.slug+"/",
     "inLanguage": "es-MX",
-    "about": {"@type":"Course","name":post.program,"provider":{"@type":"EducationalOrganization","name":"Universidad CIES","address":{"@type":"PostalAddress","addressLocality":"Tijuana","addressRegion":"BC","addressCountry":"MX"}}}
+    "about": {"@type":"Course","name":post.program,"provider":{"@type":"EducationalOrganization","name":"Universidad CIES","address":{"@type":"PostalAddress","addressLocality":post.campus||"Tijuana","addressRegion":"BC","addressCountry":"MX"}}}
   };
 
   const S = {
@@ -57,7 +57,7 @@ const BlogPostPage = ({ onNavigate }) => {
   };
 
   const carreraSlug = CARRERA_SLUG_FIX[post.programSlug] || post.programSlug;
-  const waMsg = encodeURIComponent(`Hola, leí el artículo sobre ${post.program} en Universidad CIES y me interesa obtener más información.`);
+  const waMsg = encodeURIComponent(`Hola, leí el artículo sobre ${post.program}${post.campus ? ' en campus '+post.campus : ''} en Universidad CIES y me interesa obtener más información.`);
   const waUrl = `${WA_BLOG}?text=${waMsg}`;
 
   return React.createElement('div', {style:S.wrap},
@@ -89,7 +89,7 @@ const BlogPostPage = ({ onNavigate }) => {
 
       React.createElement('div', {style:{marginTop:40,padding:'20px 24px',border:'1px solid #eee',borderLeft:'4px solid #C23535',borderRadius:8,background:'#fafafa'}},
         React.createElement('div', {style:{fontSize:'0.8rem',fontWeight:700,letterSpacing:'0.05em',textTransform:'uppercase',color:'#C23535',marginBottom:6}}, 'Carrera relacionada'),
-        React.createElement('a', {href:'/'+carreraSlug+'/', style:{fontFamily:'Varsity Impact, sans-serif',fontSize:'1.15rem',color:'#1a1f3c',textDecoration:'none',fontWeight:700}}, post.program+' en Tijuana — CIES →'),
+        React.createElement('a', {href:'/'+carreraSlug+'/', style:{fontFamily:'Varsity Impact, sans-serif',fontSize:'1.15rem',color:'#1a1f3c',textDecoration:'none',fontWeight:700}}, post.program+' en '+(post.campus||'Tijuana')+' — CIES →'),
         React.createElement('p', {style:{color:'#555',margin:'6px 0 0',fontSize:'0.95rem'}}, 'Plan de estudios, RVOE y campo laboral de la carrera.')
       ),
 
