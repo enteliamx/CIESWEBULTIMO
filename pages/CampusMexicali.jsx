@@ -20,7 +20,7 @@ const CMHero = () => (
       <div style={cmS.heroBadge} className="anim-hero-badge">Universidad CIES · Campus Mexicali, Baja California</div>
       <h1 style={cmS.heroTitle} className="anim-hero-title">Campus<br/>Mexicali</h1>
       <p style={cmS.heroSub} className="anim-hero-sub">
-        Más de 30 años formando profesionistas en Baja California, ahora en Mexicali. Licenciaturas, ingenierías, maestrías y preparatoria con RVOE ante la SEP y enfoque en el mercado laboral de la región.
+        Más de 30 años formando profesionistas en Baja California, ahora en Mexicali. Ingenierías y preparatoria con RVOE vigente y enfoque en el mercado laboral de la región.
       </p>
       <div style={cmS.heroActions} className="anim-hero-actions">
         <a href="#cm-contacto" style={cmS.btnPrimary}>Solicitar información</a>
@@ -57,9 +57,7 @@ const CMStats = () => {
 // ── Niveles educativos (4 tarjetas → subpáginas) ────────
 const CMNiveles = () => {
   const niveles = [
-    { nivel: 'Licenciaturas', desc: 'Formación profesional con RVOE SEP y docentes en activo, orientada a las profesiones con mayor demanda en Mexicali.', tags: ['RVOE SEP', 'Docentes en activo'], color: '#0F1E4A', page: 'cm-licenciaturas' },
     { nivel: 'Ingenierías', desc: 'Ingenierías para la Industria 4.0 y la economía tecnológica de la frontera. Abrimos con Ingeniería en Inteligencia Artificial.', tags: ['Industria 4.0', 'Inteligencia Artificial'], color: '#0F3A6B', page: 'cm-ingenierias' },
-    { nivel: 'Maestrías', desc: 'Posgrados en modalidad ejecutiva, pensados para quienes ya trabajan y buscan crecer profesionalmente.', tags: ['Modalidad ejecutiva', 'RVOE SEP'], color: '#C23535', page: 'cm-maestrias' },
     { nivel: 'Preparatoria', desc: 'Bachillerato con validez oficial ante la SEP, base sólida para continuar con estudios superiores en CIES.', tags: ['Validez SEP', 'Bachillerato'], color: '#2B4DA8', page: 'cm-preparatoria' },
   ];
   return (
@@ -68,9 +66,9 @@ const CMNiveles = () => {
         <div style={cmS.sectionHead}>
           <div style={cmS.eyebrow}>Oferta educativa</div>
           <h2 style={cmS.sectionTitle}>Estudia en Mexicali con CIES</h2>
-          <p style={cmS.sectionSub}>Cuatro niveles educativos bajo una misma institución con más de 30 años de trayectoria. La oferta del campus se habilita de forma progresiva por nivel.</p>
+          <p style={cmS.sectionSub}>Abrimos el campus con dos niveles educativos: ingenierías y preparatoria, ambos con RVOE vigente. La oferta se amplía de forma progresiva.</p>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 24, alignItems: 'stretch' }} className="niveles-grid">
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gap: 24, alignItems: 'stretch', maxWidth: 900, margin: '0 auto' }} className="niveles-grid">
           {niveles.map((n, i) => (
             <a key={i} href={cmNav(n.page)} style={{ ...cmS.nivelCard, background: n.color }}
               onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 10px 32px rgba(0,0,0,0.18)'; }}
@@ -134,7 +132,7 @@ const CMModelo = () => {
               <div style={cmS.modeloStatLabel}>de experiencia educativa en B.C.</div>
               <div style={cmS.modeloDivider} />
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
-                {[['4', 'niveles educativos'], ['+3,000', 'egresados'], ['100%', 'RVOE SEP'], ['686', 'lada Mexicali']].map(([n, l]) => (
+                {[['2', 'niveles educativos'], ['+3,000', 'egresados'], ['100%', 'RVOE vigente'], ['686', 'lada Mexicali']].map(([n, l]) => (
                   <div key={l} style={{ textAlign: 'center' }}>
                     <div style={{ fontFamily: "'Varsity Impact',serif", fontSize: 28, fontWeight: 800, color: '#2B4DA8' }}>{n}</div>
                     <div style={{ fontFamily: "'Figtree',sans-serif", fontSize: 12, color: '#8A8A8A', marginTop: 2 }}>{l}</div>
