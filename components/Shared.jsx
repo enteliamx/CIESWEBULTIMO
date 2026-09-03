@@ -69,11 +69,15 @@ const wS = {
 };
 
 // Promo: entry image modal + bottom beca bar. Both reappear on every page load / refresh (no persistence).
+// Interruptor global de promociones: pon true para volver a mostrar modal y barra.
+const PROMO_ACTIVA = false;
+
 const BecaBanner = () => {
   const [modalOpen, setModalOpen] = React.useState(false);
   const [barOpen, setBarOpen] = React.useState(false);
 
   React.useEffect(() => {
+    if (!PROMO_ACTIVA) return;
     const t1 = setTimeout(() => setModalOpen(true), 400);
     const t2 = setTimeout(() => setBarOpen(true), 5000);
     return () => { clearTimeout(t1); clearTimeout(t2); };
@@ -86,6 +90,8 @@ const BecaBanner = () => {
     : { img: '/assets/CIES_promocionNUEVA_web_1600.webp', alt: 'Promoción de inscripción — Universidad CIES', txt: '¡Quiero mi beca de agosto!', barTitle: '¡Becas disponibles!', barSub: 'Aplica ahora y reduce tu colegiatura.', barBtn: '¡Quiero mi beca!' };
 
   const waMsg = 'https://wa.me/526644901395?text=' + encodeURIComponent(promo.txt);
+
+  if (!PROMO_ACTIVA) return null;
 
   return (
     <React.Fragment>
