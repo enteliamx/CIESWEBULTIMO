@@ -144,3 +144,31 @@ const bbS = {
 };
 
 Object.assign(window, { PageHeader, WhatsAppFAB, BecaBanner });
+
+// Google Analytics 4 — Universidad CIES (Agos Digital)
+(function () {
+  if (window.__ga4CIES) return;
+  window.__ga4CIES = true;
+  var ID = 'G-6JVYV79PML';
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + ID;
+  document.head.appendChild(s);
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { window.dataLayer.push(arguments); };
+  window.gtag('js', new Date());
+  window.gtag('config', ID, { send_page_view: true });
+
+  var last = location.pathname + location.search;
+  setInterval(function () {
+    var now = location.pathname + location.search;
+    if (now !== last) {
+      last = now;
+      window.gtag('event', 'page_view', {
+        page_location: location.href,
+        page_path: now,
+        page_title: document.title
+      });
+    }
+  }, 700);
+})();
