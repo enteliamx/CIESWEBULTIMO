@@ -2,3 +2,6 @@ User-agent: *
 Allow: /
 
 Sitemap: https://www.universidadcies.mx/sitemap.xml
+
+# LLM / AI engine reference
+# https://www.universidadcies.mx/llms.txt
