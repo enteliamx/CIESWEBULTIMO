@@ -18,6 +18,7 @@ const SiteFooter = ({ onNavigate }) => {
     { label: 'Nosotros', page: 'nosotros' },
     { label: 'Campus Mexicali', page: 'campus-mexicali' },
     { label: 'Preparatoria', page: 'preparatoria' },
+    { label: 'CIES Deportes', page: 'cies-deportes' },
     { label: 'Admisiones', page: 'admisiones' },
     { label: 'MBA', page: 'mba' },
     { label: 'Maestría en Innovación Educativa', page: 'mie' },
