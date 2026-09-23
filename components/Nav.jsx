@@ -8,6 +8,7 @@
 const CIES_NAV_CANON = {
   home: '/',
   nosotros: '/universidad-cies-tijuana/',
+  'cies-deportes': '/cies-deportes/',
   licenciaturas: '/licenciaturas-tijuana-baja-california/',
   'lic-derecho': '/licenciatura-en-derecho-tijuana/',
   'lic-comercio': '/licenciatura-comercio-exterior-aduanas-tijuana/',
@@ -32,6 +33,24 @@ const CIES_NAV_CANON = {
   blog: '/blog/'
 };
 if (typeof window !== 'undefined') window.CIES_NAV = CIES_NAV_CANON;
+
+// Ajuste responsivo del menú: compacto en laptops y hamburguesa en tablets
+if (typeof document !== 'undefined' && !document.getElementById('cies-nav-rwd')) {
+  const st = document.createElement('style');
+  st.id = 'cies-nav-rwd';
+  st.textContent =
+    '@media (min-width:1101px) and (max-width:1279px){' +
+      '.nav-desktop > div > button{padding:8px 8px !important;font-size:13.5px !important;}' +
+      'header > div > img:first-child{margin-right:20px !important;}' +
+      '.nav-cta-desktop{padding:9px 16px !important;}' +
+    '}' +
+    '@media (max-width:1100px){' +
+      '.nav-desktop{display:none !important;}' +
+      '.nav-cta-desktop{display:none !important;}' +
+      '.nav-burger{display:flex !important;}' +
+    '}';
+  document.head.appendChild(st);
+}
 
 // Dropdown item with hover highlight
 const DropItem = ({ item, active, onNav }) => {
@@ -101,6 +120,7 @@ const navGroups = [
       ]
     },
     { id: 'preparatoria', label: 'Preparatoria', page: 'preparatoria' },
+    { id: 'cies-deportes', label: 'CIES Deportes', page: 'cies-deportes' },
     { id: 'admisiones', label: 'Admisiones', page: 'admisiones' },
   { id: 'blog', label: 'Blog', page: 'blog' },
   ];
