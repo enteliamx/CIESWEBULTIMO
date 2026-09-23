@@ -33,6 +33,8 @@
     { "source": "/mecatronica", "destination": "/ingenieria-mecatronica-tijuana/", "permanent": true },
     { "source": "/mecatronica/", "destination": "/ingenieria-mecatronica-tijuana/", "permanent": true },
     { "source": "/industrial", "destination": "/ingenieria-industrial-tijuana/", "permanent": true },
-    { "source": "/industrial/", "destination": "/ingenieria-industrial-tijuana/", "permanent": true }
+    { "source": "/industrial/", "destination": "/ingenieria-industrial-tijuana/", "permanent": true },
+    { "source": "/deportes", "destination": "/cies-deportes/", "permanent": true },
+    { "source": "/deportes/", "destination": "/cies-deportes/", "permanent": true }
   ]
 }
