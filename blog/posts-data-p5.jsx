@@ -60,6 +60,7 @@ content: `
 <li><a href="https://www.inegi.org.mx" target="_blank" rel="noopener">INEGI — Encuesta Nacional de Ocupación y Empleo</a></li>
 <li><a href="https://www.economia.gob.mx/datamexico" target="_blank" rel="noopener">Data México — Secretaría de Economía</a></li>
 </ul>
+<p><strong>Lee también:</strong> <a href="/blog/certificaciones-ingeniero-industrial-sueldo-six-sigma-lean/">Certificaciones que suben el sueldo de un Ingeniero Industrial: Lean, Six Sigma y más</a></p>
 `
 },
 {
@@ -180,6 +181,7 @@ content: `
 <li><a href="https://www.gob.mx/agenciaaduanal" target="_blank" rel="noopener">Agencia Nacional de Aduanas de México (ANAM)</a></li>
 <li><a href="https://www.gob.mx/se" target="_blank" rel="noopener">Secretaría de Economía — Comercio Exterior</a></li>
 </ul>
+<p><strong>Lee también:</strong> <a href="/blog/cuanto-gana-licenciado-comercio-exterior-aduanas/">¿Cuánto gana un Licenciado en Comercio Exterior y Aduanas en México y en Tijuana?</a></p>
 `
 },
 {
@@ -228,6 +230,7 @@ content: `
 
 <h2>Siguiente paso</h2>
 <p>Conoce el detalle de la <a href="/licenciatura-comercio-exterior-aduanas-tijuana/">Licenciatura en Comercio Exterior y Aduanas en Universidad CIES</a>, o escríbenos directo por WhatsApp al (664) 490-1395 para pedir plan de estudios, costos y fechas de inscripción. Estamos en Blvd. Federico Benítez 5, Tijuana.</p>
+<p><strong>Lee también:</strong> <a href="/blog/cuanto-gana-licenciado-comercio-exterior-aduanas/">¿Cuánto gana un Licenciado en Comercio Exterior y Aduanas en México y en Tijuana?</a></p>
 `
 },
 {
@@ -367,6 +370,7 @@ content: `
 <h2>Oferta académica de Universidad CIES</h2>
 <p>Universidad CIES tiene más de 30 años formando profesionistas en Baja California, con programas con RVOE SEP en <a href="/licenciaturas-tijuana-baja-california/">licenciaturas</a>, <a href="/ingenierias-tijuana-baja-california/">ingenierías</a> y <a href="/maestrias-ejecutivas-tijuana/">maestrías</a>, además de <a href="/preparatoria-tijuana-certificado-sep/">preparatoria</a> y el <a href="/campus-mexicali/">campus Mexicali</a>.</p>
 <p>Si quieres orientación para decidir según tu perfil, escríbenos por WhatsApp al (664) 490-1395. También puedes revisar el <a href="/admisiones-universidad-tijuana/">proceso de admisión</a>.</p>
+<p><strong>Lee también:</strong> <a href="/blog/cuanto-gana-abogado-tijuana-mexico-2026/">¿Cuánto gana un abogado en Tijuana y en México en 2026? Sueldos por área y experiencia</a> · <a href="/blog/cuanto-gana-licenciado-comercio-exterior-aduanas/">¿Cuánto gana un Licenciado en Comercio Exterior y Aduanas en México y en Tijuana?</a> · <a href="/blog/universidades-privadas-tijuana-como-elegir/">Universidades privadas en Tijuana 2027: cómo compararlas por costo, RVOE, horarios y modalidad</a></p>
 `
 },
 {
