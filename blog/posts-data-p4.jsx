@@ -256,6 +256,7 @@ content: `
 <li><a href="https://www.ibm.com/topics/data-science" target="_blank" rel="noopener">IBM — What is Data Science</a></li>
 <li><a href="https://tijuanaedc.org/resources-and-data/" target="_blank" rel="noopener">Tijuana EDC — Recursos</a></li>
 </ul>
+<p><strong>Lee también:</strong> <a href="/blog/futuro-ingenieria-inteligencia-artificial-empleo-tijuana/">¿Tiene futuro estudiar Ingeniería en Inteligencia Artificial? Lo que piden las maquiladoras de Tijuana en 2026</a></p>
 `
 },
 {
@@ -540,6 +541,7 @@ content: `
 <li><a href="https://www.observatoriolaboral.gob.mx/static/estudios-publicaciones/Panorama_profesional_estados.html" target="_blank" rel="noopener">Observatorio Laboral — Panorama profesional</a></li>
 <li><a href="https://tijuanaedc.org/resources-and-data/" target="_blank" rel="noopener">Tijuana EDC — Recursos</a></li>
 </ul>
+<p><strong>Lee también:</strong> <a href="/blog/mba-en-linea-o-presencial-tijuana/">MBA en línea o presencial: cuál conviene si trabajas en Tijuana</a></p>
 `
 },
 {
@@ -686,6 +688,7 @@ content: `
 <li><a href="https://www.gob.mx/conalep" target="_blank" rel="noopener">CONALEP — Gobierno de México</a></li>
 <li><a href="https://www.gob.mx/sep/acciones-y-programas/reconocimiento-de-validez-oficial-de-estudios-rvoe" target="_blank" rel="noopener">SEP — RVOE</a></li>
 </ul>
+<p><strong>Lee también:</strong> <a href="/blog/preparatoria-para-adultos-tijuana/">Preparatoria para adultos en Tijuana: cómo terminar la prepa en 2 años con certificado oficial</a></p>
 `
 },
 {
