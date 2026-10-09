@@ -1,7 +1,7 @@
 // Universidad CIES — Blog Index Component
 const BlogIndexPage = ({ onNavigate }) => {
     const [filter, setFilter] = React.useState('Todos');
-    const posts = window.BLOG_POSTS || [];
+    const posts = (window.BLOG_POSTS || []).slice().sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')));
     const cats = ['Todos', ...Array.from(new Set(posts.map(p => p.category)))];
     const filtered = filter === 'Todos' ? posts : posts.filter(p => p.category === filter);
 
