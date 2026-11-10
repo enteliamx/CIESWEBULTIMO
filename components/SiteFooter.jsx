@@ -91,7 +91,7 @@ const SiteFooter = ({ onNavigate }) => {
         <div style={fS.bottom}>
           <div style={fS.copy}>© 2025 Universidad CIES · Tijuana, B.C. · RVOE SEP</div>
           <div style={fS.bottomLinks}>
-            <a href="https://entelia.mx" target="_blank" rel="noopener noreferrer" style={{ ...fS.bottomLink, textDecoration:'none' }}>Creado por entelia.mx</a>
+            <a href="https://diegopartida.com" target="_blank" rel="noopener" style={{ ...fS.bottomLink, textDecoration:'none' }}>Sitio por Diego Partida</a>
           </div>
         </div>
       </div>
